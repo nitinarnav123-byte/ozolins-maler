@@ -28,8 +28,10 @@
   --error-dark:#e8a3a3;
   --error-light:#b3261e;
   --success-light:#7a5c2e;
-  --splat-green:#7C8F6E;
-  --splat-blue:#6B82A3;
+  --splat-green:#5E9B52;
+  --splat-blue:#4A86B8;
+  --splat-rust:#D1572C;
+  --splat-gold:#D9A632;
   --ink:#221F1C;
   --mid:#6B5F54;
   --faint:#8A7D6E;
@@ -154,8 +156,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-right{position:relative;overflow:hidden;background:var(--cream)}
 @media(max-width:767px){.hero-right{height:55vw;min-height:240px}}
 @media(min-width:768px){.hero-right{position:sticky;top:0;height:90vh}}
-.hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:contrast(1.05) brightness(.92)}
-.hero-vert{position:absolute;right:1.5rem;bottom:3rem;writing-mode:vertical-rl;font-family:var(--font-body);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);z-index:1}
+.hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:contrast(1.05) brightness(.92) sepia(.4) saturate(1.6) hue-rotate(-6deg)}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(to top left,rgba(34,31,28,.65) 0%,rgba(34,31,28,0) 45%);pointer-events:none}
+.hero-vert{position:absolute;right:1.5rem;bottom:3rem;writing-mode:vertical-rl;font-family:var(--font-body);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);z-index:1}
 .hero-badge{position:absolute;left:-1px;bottom:3rem;background:var(--bg-light);padding:1.2rem 1.5rem;z-index:1}
 .hero-badge-num{font-family:var(--font-display);font-style:italic;font-size:2.5rem;font-weight:300;line-height:1;color:var(--ink);display:block}
 .hero-badge-label{font-family:var(--font-body);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-top:.3rem}
@@ -232,11 +235,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .cred-item svg{width:36px;height:36px;flex-shrink:0;color:var(--sand)}
 
 /* PAINT SPLATTERS */
-.splatter{position:absolute;pointer-events:none;z-index:0;opacity:.5}
+.splatter{position:absolute;pointer-events:none;z-index:0;opacity:.85}
 .splatter svg{display:block;width:100%;height:100%}
 .splatter--sand{color:var(--sand-l)}
 .splatter--green{color:var(--splat-green)}
 .splatter--blue{color:var(--splat-blue)}
+.splatter--rust{color:var(--splat-rust)}
+.splatter--gold{color:var(--splat-gold)}
+
+/* On narrow viewports, headings/eyebrows wrap to fill the top of the section,
+   so corner splatters that sit "top" collide with that text. Drop them to
+   the bottom corner (clear of content) and shrink the cred-strip ones in place. */
+@media(max-width:680px){
+  .splat-a,.splat-g,.splat-i{top:auto!important;bottom:1.25rem!important;width:34px!important;height:34px!important}
+  .splat-b,.splat-d,.splat-h{width:26px!important;height:26px!important}
+  .splat-e,.splat-f{width:30px!important;height:30px!important}
+  .splat-e{top:.5rem!important;right:3%!important}
+}
 .cred-item span{font-family:var(--font-body);font-weight:400;font-size:.85rem;letter-spacing:.06em}
 
 /* NEWSLETTER */
@@ -345,6 +360,10 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 </style>
 </head>
 <body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="splat-blob" viewBox="0 0 110 110"><path d="M48 2C58 0 70 6 75 16C86 14 97 24 95 35C104 42 103 56 94 62C98 73 89 85 77 86C73 96 60 102 50 97C39 103 26 97 23 86C11 84 3 73 8 62C-1 55 0 42 10 35C7 24 19 13 30 16C36 6 42 0 48 2Z"/><circle cx="100" cy="78" r="7"/><circle cx="6" cy="20" r="5"/></symbol>
+  <symbol id="splat-drip" viewBox="0 0 100 120"><path d="M50 2C66 28 82 50 82 72C82 94 68 112 50 112C32 112 18 94 18 72C18 50 34 28 50 2Z"/><circle cx="74" cy="100" r="6"/><circle cx="26" cy="106" r="4"/></symbol>
+</svg>
 <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Hopp til hovedinnhold</a>
 
@@ -394,7 +413,10 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
       </div>
     </div>
     <div class="hero-right">
-      <img src="maler-bilde-3.jpg" alt="Maler på stillas som maler tak">
+      <picture>
+        <source type="image/webp" srcset="maler-bilde-3-mobile.webp 800w, maler-bilde-3.webp 1080w" sizes="100vw">
+        <img src="maler-bilde-3.jpg" alt="Maler på stillas som maler tak">
+      </picture>
       <span class="hero-vert">Moss · Østfold</span>
       <div class="hero-badge">
         <span class="hero-badge-num">20+</span>
@@ -633,8 +655,14 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </section>
 
   <!-- VALUE CHECKLIST -->
-  <section class="section bg-cream">
-    <div class="section-inner">
+  <section class="section bg-cream" style="position:relative;overflow:hidden">
+    <div class="splatter splatter--gold splat-a" aria-hidden="true" style="top:2rem;right:4%;width:60px;height:60px;transform:rotate(14deg)">
+      <svg viewBox="0 0 110 110" fill="currentColor"><use href="#splat-blob"/></svg>
+    </div>
+    <div class="splatter splatter--green splat-b" aria-hidden="true" style="bottom:2rem;left:2%;width:38px;height:38px;transform:rotate(-30deg)">
+      <svg viewBox="0 0 100 120" fill="currentColor"><use href="#splat-drip"/></svg>
+    </div>
+    <div class="section-inner" style="position:relative;z-index:1">
       <span class="eyebrow reveal">Hvorfor velge oss</span>
       <h2 class="section-title reveal">Det som skiller Ozolins Maler</h2>
       <ul class="checklist" style="margin-top:2.5rem">
@@ -817,8 +845,14 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </section>
 
   <!-- REASSURANCE -->
-  <section class="section bg-light">
-    <div class="section-inner">
+  <section class="section bg-light" style="position:relative;overflow:hidden">
+    <div class="splatter splatter--green splat-c" aria-hidden="true" style="top:1.5rem;right:5%;width:58px;height:58px;transform:rotate(-20deg)">
+      <svg viewBox="0 0 110 110" fill="currentColor"><use href="#splat-blob"/></svg>
+    </div>
+    <div class="splatter splatter--gold splat-d" aria-hidden="true" style="bottom:1rem;left:4%;width:34px;height:34px;transform:rotate(120deg)">
+      <svg viewBox="0 0 100 120" fill="currentColor"><use href="#splat-drip"/></svg>
+    </div>
+    <div class="section-inner" style="position:relative;z-index:1">
       <div class="cred-strip">
         <div class="cred-item reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -952,14 +986,11 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <!-- CREDENTIALS -->
   <section class="section bg-light" style="position:relative;overflow:hidden">
-    <div class="splatter splatter--sand" aria-hidden="true" style="top:1.5rem;right:6%;width:70px;height:70px;transform:rotate(-8deg)">
-      <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 8c11 0 20 9 20 19 0 6-3 12-8 15 9 2 16 10 16 19 0 12-10 22-22 22s-22-10-22-22c0-8 4-15 11-19-6-3-10-9-10-17C35 16 43 8 50 8z"/><circle cx="82" cy="58" r="6"/><circle cx="14" cy="74" r="4"/></svg>
+    <div class="splatter splatter--rust splat-e" aria-hidden="true" style="top:1.5rem;right:6%;width:72px;height:72px;transform:rotate(-8deg)">
+      <svg viewBox="0 0 110 110" fill="currentColor"><use href="#splat-blob"/></svg>
     </div>
-    <div class="splatter splatter--green" aria-hidden="true" style="bottom:1rem;left:3%;width:46px;height:46px;transform:rotate(24deg)">
-      <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 8c11 0 20 9 20 19 0 6-3 12-8 15 9 2 16 10 16 19 0 12-10 22-22 22s-22-10-22-22c0-8 4-15 11-19-6-3-10-9-10-17C35 16 43 8 50 8z"/><circle cx="82" cy="58" r="6"/><circle cx="14" cy="74" r="4"/></svg>
-    </div>
-    <div class="splatter splatter--blue" aria-hidden="true" style="top:45%;right:30%;width:30px;height:30px;transform:rotate(10deg)">
-      <svg viewBox="0 0 100 100" fill="currentColor"><circle cx="46" cy="46" r="30"/><circle cx="84" cy="68" r="7"/></svg>
+    <div class="splatter splatter--blue splat-f" aria-hidden="true" style="bottom:1rem;left:3%;width:44px;height:44px;transform:rotate(160deg)">
+      <svg viewBox="0 0 100 120" fill="currentColor"><use href="#splat-drip"/></svg>
     </div>
     <div class="section-inner">
       <div class="cred-strip">
@@ -980,8 +1011,14 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </section>
 
   <!-- VALUES -->
-  <section class="section bg-cream">
-    <div class="section-inner">
+  <section class="section bg-cream" style="position:relative;overflow:hidden">
+    <div class="splatter splatter--blue splat-g" aria-hidden="true" style="top:1.5rem;right:5%;width:50px;height:50px;transform:rotate(8deg)">
+      <svg viewBox="0 0 110 110" fill="currentColor"><use href="#splat-blob"/></svg>
+    </div>
+    <div class="splatter splatter--rust splat-h" aria-hidden="true" style="bottom:1.5rem;left:3%;width:36px;height:36px;transform:rotate(140deg)">
+      <svg viewBox="0 0 100 120" fill="currentColor"><use href="#splat-drip"/></svg>
+    </div>
+    <div class="section-inner" style="position:relative;z-index:1">
       <span class="eyebrow reveal">Våre verdier</span>
       <h2 class="section-title reveal">Det vi alltid står for</h2>
       <div class="grid-3" style="margin-top:2.5rem">
@@ -1021,8 +1058,11 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
     <div class="page-hero-content"><h1>Galleri</h1></div>
   </section>
 
-  <section class="section bg-light">
-    <div class="section-inner">
+  <section class="section bg-light" style="position:relative;overflow:hidden">
+    <div class="splatter splatter--rust splat-i" aria-hidden="true" style="top:1.5rem;right:4%;width:54px;height:54px;transform:rotate(-16deg)">
+      <svg viewBox="0 0 110 110" fill="currentColor"><use href="#splat-blob"/></svg>
+    </div>
+    <div class="section-inner" style="position:relative;z-index:1">
       <span class="eyebrow reveal">Utvalgte prosjekter</span>
       <h2 class="section-title reveal">Et innblikk i arbeidet vårt</h2>
       <div class="gallery-grid" style="margin-top:2.5rem">

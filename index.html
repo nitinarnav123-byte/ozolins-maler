@@ -24,6 +24,7 @@
   --cream:#ECE2D4;
   --sand:#B5703A;
   --sand-l:#D99A5F;
+  --sand-d:#95592C;
   --ink:#221F1C;
   --mid:#6B5F54;
   --faint:#8A7D6E;
@@ -48,7 +49,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:300;line-height:1.1;lett
 .page.active{display:block}
 
 /* SKIP LINK */
-.skip-link{position:absolute;left:-9999px;top:0;background:var(--sand);color:var(--navy);padding:1rem 1.5rem;z-index:2000;font-weight:500;border-radius:0 0 6px 0}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--sand);color:#000;padding:1rem 1.5rem;z-index:2000;font-weight:500;border-radius:0 0 6px 0}
 .skip-link:focus{left:0}
 
 /* FOCUS */
@@ -65,7 +66,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .bg-navy .eyebrow::before{background:var(--sand-l)}
 
 /* EYEBROW / LABELS */
-.eyebrow{font-family:var(--font-body);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);font-weight:400;display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.eyebrow{font-family:var(--font-body);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-d);font-weight:400;display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
 .eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--sand);opacity:.7}
 .bg-navy .eyebrow{color:var(--sand-l)}
 .section-title{font-family:var(--font-display);font-style:italic;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:300;margin-bottom:1rem;letter-spacing:-.01em}
@@ -235,6 +236,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .form-msg.success{color:var(--sand)}
 .form-msg.error{color:#e8a3a3}
 .bg-light .form-msg.success,.bg-cream .form-msg.success{color:#7a5c2e}
+.bg-light .form-msg.error,.bg-cream .form-msg.error{color:#b3261e}
+.bg-navy .form-msg.success{color:var(--sand-l)}
 
 /* PROCESS STEPS */
 .process-steps{display:grid;gap:2rem}
@@ -366,7 +369,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 <div class="page" id="page-hjem" data-title="Maler Moss | Ozolins Maler — Innvendig og utvendig maling" data-desc="Ozolins Maler i Moss — fagbrev maler. Innvendig og utvendig maling, tapetsering og sparkling. Gratis befaring og pristilbud.">
 
   <section class="hero">
-    <span class="hero-bg-num">OM</span>
+    <span class="hero-bg-num" aria-hidden="true">OM</span>
     <div class="hero-left">
       <span class="eyebrow">Moss · Østfold · Omegn</span>
       <h1 class="hero-name">Ozolins<span class="line2">Maler</span><span class="line3">— håndverk med ro.</span></h1>

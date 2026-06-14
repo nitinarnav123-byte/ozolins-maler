@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="page-title">Maler Moss | Ozolins Maler — Innvendig og utvendig maling</title>
+<meta id="page-description" name="description" content="Ozolins Maler i Moss — fagbrev maler. Innvendig og utvendig maling, tapetsering og sparkling. Gratis befaring og pristilbud.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta id="og-title" property="og:title" content="Maler Moss | Ozolins Maler">
+<meta id="og-description" property="og:description" content="Ozolins Maler i Moss — håndverk du kan stole på. Gratis befaring og pristilbud innen 24 timer.">
+<meta property="og:image" content="https://images.pexels.com/photos/7218579/pexels-photo-7218579.jpeg?auto=compress&cs=tinysrgb&w=1920">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ozolins Maler","image":"https://images.pexels.com/photos/7218579/pexels-photo-7218579.jpeg?auto=compress&cs=tinysrgb&w=1920","telephone":"+4796712468","email":"post@ozolins-maler.no","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Karlstadveien 19","postalCode":"1516","addressLocality":"Moss","addressCountry":"NO"},"openingHours":["Mo-Fr 07:00-17:00","Sa 08:00-14:00"],"founder":{"@type":"Person","name":"Vairis Ozolins"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#2A2521;
+  --cream:#ECE2D4;
+  --sand:#B5703A;
+  --sand-l:#D99A5F;
+  --ink:#221F1C;
+  --mid:#6B5F54;
+  --faint:#8A7D6E;
+  --rule:rgba(34,31,28,.1);
+  --bg-light:#F6F1EA;
+  --white:#FFFFFF;
+  --font-display:'Cormorant',Georgia,serif;
+  --font-body:'DM Mono','Courier New',monospace;
+  --space-d:130px;
+  --space-m:72px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);font-weight:300;font-size:.95rem;line-height:1.85;color:var(--ink);background:var(--bg-light);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font-family:var(--font-body);font-size:1rem}
+ul{list-style:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:300;line-height:1.1;letter-spacing:-.01em}
+.page{display:none}
+.page.active{display:block}
+
+/* SKIP LINK */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--sand);color:var(--navy);padding:1rem 1.5rem;z-index:2000;font-weight:500;border-radius:0 0 6px 0}
+.skip-link:focus{left:0}
+
+/* FOCUS */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--sand);outline-offset:2px}
+
+/* SECTION SPACING & BACKGROUNDS */
+.section{padding:var(--space-m) 1.5rem}
+@media(min-width:900px){.section{padding:var(--space-d) 3rem}}
+.section-inner{max-width:1240px;margin:0 auto}
+.bg-light{background:var(--bg-light);color:var(--ink)}
+.bg-cream{background:var(--cream);color:var(--ink)}
+.bg-navy{background:var(--ink);color:var(--white);position:relative;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 64px)}
+.bg-navy a{color:var(--white)}
+.bg-navy .eyebrow::before{background:var(--sand-l)}
+
+/* EYEBROW / LABELS */
+.eyebrow{font-family:var(--font-body);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);font-weight:400;display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--sand);opacity:.7}
+.bg-navy .eyebrow{color:var(--sand-l)}
+.section-title{font-family:var(--font-display);font-style:italic;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:300;margin-bottom:1rem;letter-spacing:-.01em}
+.section-lead{font-family:var(--font-body);font-size:clamp(.85rem,1.2vw,.98rem);max-width:640px;color:inherit;opacity:.85;line-height:1.9}
+.bg-navy .section-lead{opacity:.7}
+
+/* SCROLL PROGRESS */
+.scroll-bar{position:fixed;top:0;left:0;height:2px;background:var(--sand);z-index:2001;width:0%}
+
+/* GALLERY NUMERALS */
+.gallery-num{position:absolute;top:-1.4rem;left:-.4rem;z-index:2;font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(3.5rem,7vw,6rem);color:var(--bg-light);line-height:1;pointer-events:none;mix-blend-mode:screen;opacity:.6}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 2.1rem;font-family:var(--font-body);font-size:.74rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;border-radius:0;min-height:48px;min-width:44px;transition:transform .2s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .2s var(--ease);cursor:pointer;border:1px solid transparent;text-align:center}
+@media(prefers-reduced-motion:no-preference){.btn:hover{transform:translateY(-1px)}}
+.btn-primary{background:var(--sand);color:var(--white);box-shadow:none}
+.btn-primary:hover{background:var(--sand-l);box-shadow:none}
+.btn-dark{background:var(--ink);color:var(--bg-light)}
+.btn-dark:hover{background:var(--sand)}
+.btn-outline-navy{background:transparent;border-color:rgba(34,31,28,.2);color:var(--mid)}
+.btn-outline-navy:hover{border-color:var(--ink);color:var(--ink);background:rgba(34,31,28,.03)}
+.btn-row{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 1.5rem;transition:background .3s var(--ease),backdrop-filter .3s var(--ease),padding .3s var(--ease)}
+@media(min-width:900px){#nav{padding:1.6rem 3rem}}
+#nav{background:var(--cream);border-bottom:1px solid var(--rule)}
+#nav.scrolled{padding:1rem 1.5rem;box-shadow:0 4px 24px -12px rgba(34,31,28,.18)}
+@media(min-width:900px){#nav.scrolled{padding:1.1rem 3rem}}
+.nav-logo{font-family:var(--font-display);font-style:italic;font-size:1.6rem;font-weight:400;color:var(--ink);letter-spacing:.01em;display:flex;align-items:center;gap:.6rem}
+.nav-logo img{height:46px;width:auto;display:block}
+.nav-links{display:none;list-style:none;gap:1.9rem;align-items:center}
+@media(min-width:1000px){.nav-links{display:flex}}
+.nav-links a{font-family:var(--font-body);font-size:.78rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.7;transition:opacity .2s,color .2s;padding:.4rem 0;position:relative}
+.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--sand)}
+.nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--sand)}
+.nav-call{display:none}
+@media(min-width:1000px){.nav-call{display:inline-flex}}
+.nav-call.btn{padding:.7rem 1.4rem;font-size:.7rem}
+
+/* HAMBURGER */
+.hbg{display:flex;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;background:transparent;border:none;cursor:pointer}
+@media(min-width:1000px){.hbg{display:none}}
+.hbg span{display:block;width:26px;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .25s var(--ease)}
+.hbg.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hbg.open span:nth-child(2){opacity:0}
+.hbg.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* MOBILE NAV OVERLAY */
+.mob-nav{position:fixed;inset:0;background:var(--navy);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;opacity:0;pointer-events:none;transition:opacity .25s var(--ease)}
+.mob-nav.open{opacity:1;pointer-events:auto}
+.mob-nav a{font-family:var(--font-display);font-style:italic;font-size:clamp(1.8rem,8vw,2.6rem);color:rgba(255,255,255,.55);font-weight:300;transition:color .3s}
+.mob-nav a:hover{color:var(--white)}
+.mob-nav .btn{margin-top:1rem;font-family:var(--font-body);font-style:normal;font-size:.74rem;color:var(--white)}
+
+/* MOBILE STICKY BAR */
+.mob-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--ink);padding:.85rem 1.2rem;align-items:center;justify-content:space-between;gap:1rem}
+@media(min-width:900px){.mob-sticky{display:none}}
+.mob-sticky a{color:var(--white)}
+.mob-sticky .phone{font-family:var(--font-display);font-style:italic;font-size:1.2rem;letter-spacing:.02em;color:rgba(255,255,255,.6)}
+@media(max-width:899px){body{padding-bottom:68px}}
+
+/* HERO — split, editorial */
+.hero{min-height:90vh;display:grid;grid-template-columns:1fr;position:relative;overflow:hidden;background:var(--bg-light);padding-top:5.5rem}
+@media(min-width:768px){.hero{grid-template-columns:55% 45%}}
+.hero-bg-num{position:absolute;top:50%;left:-2vw;transform:translateY(-52%);font-family:var(--font-display);font-size:55vw;font-style:italic;font-weight:600;line-height:.85;color:rgba(34,31,28,.04);user-select:none;pointer-events:none;letter-spacing:-.05em;z-index:0}
+.hero-left{position:relative;z-index:1;padding:clamp(2rem,6vw,5rem) clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:flex-start;min-height:55vh}
+@media(min-width:768px){.hero-left{min-height:calc(90vh - 5.5rem)}}
+.hero-name{font-family:var(--font-display);font-size:clamp(2.8rem,11vw,9rem);font-weight:300;line-height:.9;letter-spacing:-.03em;color:var(--ink);margin:0;padding:1rem 0 2.5rem}
+.hero-name .line2{display:block;padding-left:clamp(1.2rem,4vw,4rem);color:var(--mid);font-weight:300}
+.hero-name .line3{display:block;font-style:italic;color:var(--ink);font-size:clamp(1.6rem,5vw,4.5rem)}
+.hero-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding-top:2rem;border-top:1px solid var(--rule);flex-wrap:wrap;margin-top:auto}
+.hero-desc{font-family:var(--font-body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);line-height:2;max-width:32ch}
+.hero-ctas{display:flex;gap:.8rem;flex-shrink:0;flex-wrap:wrap}
+@media(max-width:600px){
+  .hero-foot{flex-direction:column;align-items:stretch}
+  .hero-ctas{width:100%;flex-direction:column}
+  .hero-ctas .btn{width:100%}
+}
+.hero-right{position:relative;overflow:hidden;background:var(--cream)}
+@media(max-width:767px){.hero-right{height:55vw;min-height:240px}}
+@media(min-width:768px){.hero-right{position:sticky;top:0;height:90vh}}
+.hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:contrast(1.05) brightness(.92)}
+.hero-vert{position:absolute;right:1.5rem;bottom:3rem;writing-mode:vertical-rl;font-family:var(--font-body);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);z-index:1}
+.hero-badge{position:absolute;left:-1px;bottom:3rem;background:var(--bg-light);padding:1.2rem 1.5rem;z-index:1}
+.hero-badge-num{font-family:var(--font-display);font-style:italic;font-size:2.5rem;font-weight:300;line-height:1;color:var(--ink);display:block}
+.hero-badge-label{font-family:var(--font-body);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);display:block;margin-top:.3rem}
+@media(prefers-reduced-motion:no-preference){
+  .hero-left .eyebrow,.hero-name,.hero-foot{opacity:0;transform:translateY(20px);animation:fadein 1s var(--ease) forwards}
+  .hero-name{animation-delay:.12s}
+  .hero-foot{animation-delay:.3s}
+}
+@keyframes fadein{to{opacity:1;transform:none}}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.045)}}
+
+/* PAGE HERO (sub-pages) */
+.page-hero{position:relative;height:50vh;min-height:340px;overflow:hidden;display:flex;align-items:flex-end}
+.page-hero-media{position:absolute;inset:0}
+.page-hero-media img{width:100%;height:100%;object-fit:cover}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(34,28,22,.35) 0%,rgba(34,28,22,.78) 100%)}
+.page-hero-content{position:relative;z-index:2;padding:0 1.5rem 3rem;max-width:1240px;margin:0 auto;width:100%}
+@media(min-width:900px){.page-hero-content{padding:0 3rem 4rem}}
+.page-hero-content h1{color:var(--white);font-size:clamp(2.8rem,7vw,5.5rem)}
+
+/* SCROLL REVEAL */
+.reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+  body.js-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  body.js-ready .reveal.visible{opacity:1;transform:none}
+}
+
+/* GRID HELPERS */
+.grid-2{display:grid;gap:2.5rem}
+@media(min-width:800px){.grid-2{grid-template-columns:1fr 1fr;gap:3.5rem}}
+.grid-3{display:grid;gap:2rem}
+@media(min-width:700px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-4{display:grid;gap:1.6rem}
+@media(min-width:640px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+
+/* CARDS */
+.card{background:var(--bg-light);border:1px solid rgba(34,31,28,.08);border-radius:0;padding:2rem;height:100%;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.bg-cream .card{background:var(--white)}
+.card-icon{width:48px;height:48px;color:var(--sand);margin-bottom:1.2rem}
+.card h3{font-size:1.5rem;margin-bottom:.6rem}
+.card p{opacity:.78;font-size:.96rem}
+@media(prefers-reduced-motion:no-preference){.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -16px rgba(34,31,28,.18);border-color:rgba(181,112,58,.4)}}
+
+/* SERVICE CARD (full page) */
+.service-card{background:var(--white);border:1px solid rgba(34,31,28,.08);border-radius:0;padding:2.4rem;display:flex;flex-direction:column;gap:1rem}
+.service-card .price{font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--ink);font-weight:300;margin-top:auto;padding-top:1rem;border-top:1px solid var(--rule)}
+
+/* SERVICE PHOTOS */
+.service-photos{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.service-photos figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--cream)}
+.service-photos img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02)}
+
+/* CINEMATIC BREAK */
+.cinematic{position:relative;height:60vh;min-height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.cinematic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cinematic .overlay{position:absolute;inset:0;background:rgba(34,28,22,.6)}
+.cinematic blockquote{position:relative;z-index:2;font-family:var(--font-display);font-style:italic;font-size:clamp(2rem,5.5vw,4.2rem);color:var(--white);text-align:center;max-width:900px;padding:0 1.5rem;line-height:1.25}
+
+/* TESTIMONIALS */
+.stars{display:flex;gap:.25rem;color:var(--sand);margin-bottom:1rem}
+.stars svg{width:18px;height:18px;fill:currentColor}
+.testimonial-card{background:var(--white);border-radius:0;padding:2.2rem;border:1px solid rgba(34,31,28,.08);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+@media(prefers-reduced-motion:no-preference){.testimonial-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -16px rgba(34,31,28,.18)}}
+.bg-navy .testimonial-card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+.testimonial-card p{font-size:1.02rem;opacity:.85;margin-bottom:1.2rem}
+.testimonial-name{font-weight:500}
+.testimonial-loc{font-size:.85rem;opacity:.65}
+
+/* CRED STRIP */
+.cred-strip{display:grid;gap:1.6rem}
+@media(min-width:700px){.cred-strip{grid-template-columns:repeat(3,1fr)}}
+.cred-item{display:flex;align-items:center;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.cred-item svg{width:36px;height:36px;flex-shrink:0;color:var(--sand)}
+.cred-item span{font-family:var(--font-body);font-weight:400;font-size:.8rem;letter-spacing:.06em}
+
+/* NEWSLETTER */
+.newsletter-form{display:flex;flex-direction:column;gap:.9rem;max-width:480px;margin-top:1.6rem}
+@media(min-width:560px){.newsletter-form{flex-direction:row}}
+.newsletter-form input{flex:1;padding:1rem 1.2rem;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:var(--white);border-radius:0}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.5)}
+.form-msg{margin-top:1rem;font-size:.92rem;font-weight:500}
+.form-msg.success{color:var(--sand)}
+.form-msg.error{color:#e8a3a3}
+.bg-light .form-msg.success,.bg-cream .form-msg.success{color:#7a5c2e}
+
+/* PROCESS STEPS */
+.process-steps{display:grid;gap:2rem}
+@media(min-width:800px){.process-steps{grid-template-columns:repeat(4,1fr)}}
+.process-step{text-align:left;padding:1.6rem 0;border-top:1px solid var(--rule)}
+.process-step .num{font-family:var(--font-display);font-style:italic;font-size:2.6rem;font-weight:300;color:var(--sand);display:block;margin-bottom:.5rem}
+.process-step h3{font-size:1.25rem;margin-bottom:.4rem}
+.process-step p{opacity:.78;font-size:.95rem}
+
+/* CHECKLIST */
+.checklist{display:grid;gap:1.2rem}
+@media(min-width:700px){.checklist{grid-template-columns:repeat(2,1fr)}}
+.checklist li{display:flex;gap:.9rem;align-items:flex-start}
+.checklist svg{width:24px;height:24px;color:var(--sand);flex-shrink:0;margin-top:.1rem}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:1.6rem;border-left:2px solid var(--sand);padding-left:1.6rem}
+.timeline-item .year{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--navy)}
+.bg-navy .timeline-item .year{color:var(--sand)}
+
+/* VALUE CARDS */
+.value-card{padding:2rem;border:1px solid rgba(34,31,28,.08);border-radius:0;background:var(--white)}
+.bg-light .value-card,.bg-navy .value-card{background:transparent;border-color:rgba(255,255,255,.12)}
+.bg-light .value-card{border-color:rgba(34,31,28,.1)}
+
+/* GALLERY */
+.gallery-grid{display:grid;gap:.5rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:700px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+.gallery-item{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:0}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-cap{position:absolute;inset:auto 0 0 0;padding:1.2rem;background:linear-gradient(to top,rgba(34,28,22,.85),transparent);color:var(--white);font-family:var(--font-display);font-style:italic;font-size:1.15rem;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s}
+.gallery-item:hover .gallery-cap,.gallery-item:focus-within .gallery-cap{opacity:1;transform:none}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;background:none;border:none;text-align:left;font-family:var(--font-display);font-style:italic;font-size:1.25rem;font-weight:300;color:inherit;cursor:pointer}
+.faq-q svg{width:22px;height:22px;flex-shrink:0;color:var(--sand);transition:transform .25s var(--ease)}
+.faq-q[aria-expanded="true"] svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.faq-a.open{max-height:480px}
+.faq-a-inner{padding:0 0 1.4rem;opacity:.8;font-size:.97rem}
+
+/* FORMS */
+.form-grid{display:grid;gap:1.2rem}
+@media(min-width:600px){.form-grid.cols-2{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field label{font-size:.85rem;font-weight:500;letter-spacing:.03em}
+.field input,.field select,.field textarea{padding:.85rem 1rem;border:1px solid rgba(34,31,28,.2);border-radius:0;background:var(--white);color:var(--ink);font-size:1rem}
+.field textarea{resize:vertical;min-height:120px}
+.field-error{font-size:.82rem;color:#b3261e;min-height:1.1em}
+
+/* BOOKING PATHS */
+.booking-card{background:var(--bg-light);border:1px solid rgba(34,31,28,.1);border-radius:0;padding:1.5rem}
+.booking-card h3{font-size:1.4rem;margin-bottom:1rem}
+
+/* MAP */
+.map-frame{width:100%;border:0;border-radius:0;filter:grayscale(100%) saturate(0);height:360px}
+
+/* HOURS TABLE */
+.hours-table{width:100%;border-collapse:collapse;max-width:420px}
+.hours-table td{padding:.8rem 0;border-bottom:1px solid rgba(34,31,28,.1)}
+.hours-table td:last-child{text-align:right;font-weight:500}
+
+/* CONTACT INFO */
+.contact-list{display:flex;flex-direction:column;gap:1.4rem}
+.contact-list li{display:flex;gap:1rem;align-items:flex-start}
+.contact-list svg{width:26px;height:26px;color:var(--sand);flex-shrink:0;margin-top:.15rem}
+
+/* FOOTER */
+footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem 2rem}
+@media(min-width:900px){footer{padding:var(--space-d) 3rem 2rem}}
+.footer-grid{display:grid;gap:2.5rem;max-width:1240px;margin:0 auto}
+@media(min-width:800px){.footer-grid{grid-template-columns:1fr 1fr 1.1fr}}
+@media(min-width:1100px){.footer-grid{grid-template-columns:1fr .8fr 1fr 1fr}}
+.footer-map{width:100%;aspect-ratio:4/3;border:0;filter:grayscale(100%) saturate(0) brightness(.9) invert(1);opacity:.75;margin-top:.4rem}
+.footer-logo{font-family:var(--font-display);font-style:italic;font-size:1.8rem;font-weight:300;display:flex;align-items:center;gap:.7rem}
+.footer-logo img{height:58px;width:auto;display:block}
+.footer-tagline{margin-top:.6rem;opacity:.6;font-style:italic;font-family:var(--font-display);font-size:1.1rem}
+.footer-col h4{font-family:var(--font-body);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.1rem;font-weight:400;color:var(--sand-l)}
+.footer-col ul{display:flex;flex-direction:column;gap:.7rem}
+.footer-col a,.footer-col p{opacity:.7;font-size:.85rem}
+.footer-bottom{max-width:1240px;margin:3rem auto 0;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-size:.7rem;letter-spacing:.08em;opacity:.5}
+
+/* INSTAGRAM CARD */
+.insta-card{display:flex;align-items:center;gap:1rem;padding:1.5rem;border:1px solid rgba(34,31,28,.1);border-radius:0;background:var(--white)}
+.insta-card svg{width:32px;height:32px;color:var(--sand)}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
+
+</style>
+</head>
+<body>
+<div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Hopp til hovedinnhold</a>
+
+<header>
+<nav id="nav" aria-label="Hovedmeny">
+  <a href="#hjem" class="nav-logo"><img src="unnamed-Photoroom.png" alt="Ozolins Maler logo"> Ozolins Maler</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hjem" data-route="hjem">Hjem</a></li>
+    <li><a href="#tjenester" data-route="tjenester">Tjenester</a></li>
+    <li><a href="#bestilling" data-route="bestilling">Bestilling</a></li>
+    <li><a href="#om-oss" data-route="om-oss">Om oss</a></li>
+    <li><a href="#galleri" data-route="galleri">Galleri</a></li>
+    <li><a href="#kontakt" data-route="kontakt">Kontakt</a></li>
+  </ul>
+  <a href="tel:96712468" class="btn btn-primary nav-call">Ring oss</a>
+  <button class="hbg" id="hbg" aria-label="Åpne meny" aria-expanded="false" aria-controls="mob-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</header>
+
+<div class="mob-nav" id="mob-nav">
+  <a href="#hjem" data-route="hjem">Hjem</a>
+  <a href="#tjenester" data-route="tjenester">Tjenester</a>
+  <a href="#bestilling" data-route="bestilling">Bestilling</a>
+  <a href="#om-oss" data-route="om-oss">Om oss</a>
+  <a href="#galleri" data-route="galleri">Galleri</a>
+  <a href="#kontakt" data-route="kontakt">Kontakt</a>
+  <a href="tel:96712468" class="btn btn-primary">Ring oss — 967 12 468</a>
+</div>
+
+<main id="main">
+<!-- ============ PAGE 1: HJEM ============ -->
+<div class="page" id="page-hjem" data-title="Maler Moss | Ozolins Maler — Innvendig og utvendig maling" data-desc="Ozolins Maler i Moss — fagbrev maler. Innvendig og utvendig maling, tapetsering og sparkling. Gratis befaring og pristilbud.">
+
+  <section class="hero">
+    <span class="hero-bg-num">OM</span>
+    <div class="hero-left">
+      <span class="eyebrow">Moss · Østfold · Omegn</span>
+      <h1 class="hero-name">Ozolins<span class="line2">Maler</span><span class="line3">— håndverk med ro.</span></h1>
+      <div class="hero-foot">
+        <p class="hero-desc">Malerarbeid utført med presisjon, ro og respekt for materialene — for hjem og bedrifter i Moss og omegn.</p>
+        <div class="hero-ctas">
+          <a href="#bestilling" class="btn btn-primary">Bestill befaring</a>
+          <a href="#tjenester" class="btn btn-outline-navy">Se tjenester</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.pexels.com/photos/6444256/pexels-photo-6444256.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Lyst, nymalt rom i varme, dempede toner">
+      <span class="hero-vert">Moss · Østfold</span>
+      <div class="hero-badge">
+        <span class="hero-badge-num">20+</span>
+        <span class="hero-badge-label">Fullførte oppdrag</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES TEASER -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Hva vi gjør</span>
+      <h2 class="section-title reveal">Tjenester med håndverksmessig kvalitet</h2>
+      <p class="section-lead reveal">Fra første strøk til siste detalj — vi tar ansvar for hele jobben, slik at du slipper å tenke på den.</p>
+      <div class="grid-4" style="margin-top:3rem">
+        <div class="card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21v-4a2 2 0 0 1 2-2h2.5l9-9 3.5 3.5-9 9V21H4Z"/><path d="M14.5 6.5l3 3"/></svg>
+          <h3>Innvendig maling</h3>
+          <p>Stue, soverom, kjøkken og bad — rent, presist og uten unødig støy i hverdagen.</p>
+        </div>
+        <div class="card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          <h3>Utvendig maling</h3>
+          <p>Fasade, kledning og detaljer som tåler vær og vind i mange år fremover.</p>
+        </div>
+        <div class="card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M9 3v18"/></svg>
+          <h3>Tapetsering</h3>
+          <p>Presis oppmåling og sømløs montering — fra mønstrede tapeter til strie.</p>
+        </div>
+        <div class="card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-4 4 2 6-8 4 5"/><path d="M3 21h18"/></svg>
+          <h3>Sparkeling og pussing</h3>
+          <p>Glatte, jevne flater som gir malingen et resultat som varer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CINEMATIC BREAK -->
+  <section class="cinematic">
+    <img src="https://images.pexels.com/photos/19866421/pexels-photo-19866421.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+    <div class="overlay"></div>
+    <blockquote class="reveal">«Kvalitet du ser — og kjenner.»</blockquote>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section bg-cream">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Hva kundene sier</span>
+      <h2 class="section-title reveal">Tilbakemeldinger fra Moss-området</h2>
+      <div class="grid-3" style="margin-top:3rem">
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+          </div>
+          <p>«Vi fikk malt hele stua og gangen — resultatet var akkurat som vi hadde ønsket oss. Ryddig arbeid, ingen overraskelser på fakturaen, og Vairis var presis på tid begge dagene.»</p>
+          <p class="testimonial-name">Marianne Lund</p>
+          <p class="testimonial-loc">Jeløy, Moss</p>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+          </div>
+          <p>«Fasaden vår hadde flassende maling etter mange norske vintre. Ozolins Maler gjorde grundig forarbeid med skraping og grunning før selve malingen — det merkes på resultatet. Anbefales på det varmeste.»</p>
+          <p class="testimonial-name">Thomas Berg</p>
+          <p class="testimonial-loc">Rygge, Moss</p>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.3l6.1-.7Z"/></svg>
+          </div>
+          <p>«Vi tapetserte soverommet med et mønstret tapet vi var nervøse for å få rett. Vairis matchet mønsteret perfekt i alle skjøtene. Han ga oss også gode råd om malingstype til badet vårt.»</p>
+          <p class="testimonial-name">Camilla og Erik Haugen</p>
+          <p class="testimonial-loc">Moss sentrum</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRED STRIP -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <div class="cred-strip">
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 6v6c0 5 3.8 9 9 10 5.2-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Fagbrev maler</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Gratis befaring og pristilbud</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+          <span>20+ fullførte oppdrag</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER BAND -->
+  <section class="section bg-navy">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Nyhetsbrev</span>
+      <h2 class="section-title reveal">Gratis befaring — innen 24 timer</h2>
+      <p class="section-lead reveal">Meld deg på, så tar vi kontakt med en uforpliktende befaring og pristilbud rett i innboksen din.</p>
+      <form class="newsletter-form reveal" id="newsletter-form-home" novalidate>
+        <input type="hidden" name="_subject" value="Nytt nyhetsbrev-påmelding — Ozolins Maler">
+        <label for="newsletter-email-home" class="visually-hidden" style="position:absolute;left:-9999px">E-postadresse</label>
+        <input type="email" id="newsletter-email-home" name="email" placeholder="din@epost.no" required aria-required="true">
+        <button type="submit" class="btn btn-primary">Meld meg på</button>
+      </form>
+      <p class="form-msg" id="newsletter-msg-home" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section bg-cream">
+    <div class="section-inner reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <h2 class="section-title">Klar for å gi hjemmet ditt et nytt uttrykk?</h2>
+      <p class="section-lead" style="margin:0 auto 2rem">Book en gratis befaring i dag, så finner vi den beste løsningen for ditt prosjekt — uten forpliktelser.</p>
+      <a href="#bestilling" class="btn btn-dark">Book i dag</a>
+    </div>
+  </section>
+
+</div>
+<!-- ============ PAGE 2: TJENESTER ============ -->
+<div class="page" id="page-tjenester" data-title="Tjenester | Maler Moss — Ozolins Maler" data-desc="Se alle tjenester fra Ozolins Maler i Moss: innvendig og utvendig maling, tapetsering, sparkling, betonggulv, beising og mer.">
+
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <img src="https://images.pexels.com/photos/6764270/pexels-photo-6764270.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler ruller på fersk maling på en vegg under renovering">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Tjenester</h1></div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Vårt håndverk</span>
+      <h2 class="section-title reveal">Alt innen maling og overflatebehandling</h2>
+      <p class="section-lead reveal">Vi tar oppdrag store som små — fra ett rom til hele fasaden. Alle priser inkluderer gratis befaring og uforpliktende pristilbud.</p>
+      <div class="grid-2" style="margin-top:3rem">
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21v-4a2 2 0 0 1 2-2h2.5l9-9 3.5 3.5-9 9V21H4Z"/><path d="M14.5 6.5l3 3"/></svg>
+          <h3>Innvendig maling</h3>
+          <p>Vi maler stuer, soverom, kjøkken, bad og hele leiligheter med presisjon og ryddighet. Møbler dekkes til, gulv beskyttes, og vi rydder etter oss hver dag. Du får jevne flater, rene kanter og et resultat som holder i mange år.</p>
+          <div class="service-photos">
+            <figure><img src="unnamed (4).webp" alt="Rom under malerarbeid"></figure>
+            <figure><img src="unnamed (7).webp" alt="Ferdig malt rom med varme toner"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          <h3>Utvendig maling</h3>
+          <p>Fasademaling krever riktig forarbeid — vasking, skraping, grunning og tetting av sprekker. Vi bruker maling tilpasset norsk klima, slik at fargen og overflaten tåler regn, frost og sol i mange sesonger fremover.</p>
+          <div class="service-photos">
+            <figure><img src="unnamed (1).webp" alt="Fasadearbeid med stillas i Moss"></figure>
+            <figure><img src="unnamed (3).webp" alt="Eksteriørarbeid i Moss"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M9 3v18"/></svg>
+          <h3>Tapetsering</h3>
+          <p>Fra klassisk strie til mønstrede designtapeter — vi måler nøyaktig, sørger for rette skjøter og mønstertilpasning, og leverer et resultat uten synlige overganger. Egnet for stuer, soverom og entréer.</p>
+          <div class="service-photos">
+            <figure><img src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Vegg klargjort for tapetsering"></figure>
+            <figure><img src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Nymontert tapet med mønster på vegg"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-4 4 2 6-8 4 5"/><path d="M3 21h18"/></svg>
+          <h3>Sparkeling og pussing</h3>
+          <p>Ujevne vegger, hull etter spiker eller gamle skader — vi sparkler, sliper og klargjør underlaget slik at malingen legger seg jevnt. Godt forarbeid er halve jobben for et profesjonelt resultat.</p>
+          <div class="service-photos">
+            <figure><img src="unnamed (8).webp" alt="Rom under sparkling og pussing"></figure>
+            <figure><img src="unnamed (4).webp" alt="Vegg klargjort for maling etter sparkling"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+          <h3>Betonggulv og epoxy</h3>
+          <p>Slitesterke gulv til garasje, kjeller, bod eller næringslokale. Epoxybelegg gir et tett, rengjøringsvennlig og holdbart gulv som tåler både belastning og kjemikalier.</p>
+          <div class="service-photos">
+            <figure><img src="unnamed (8).webp" alt="Betonggulv før behandling"></figure>
+            <figure><img src="unnamed (6).webp" alt="Ferdig gulv i nyoppusset rom"></figure>
+          </div>
+          <div class="price">Pris etter befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M5 9l7-7 7 7M5 15l7 7 7-7"/></svg>
+          <h3>Beising og overflatebehandling</h3>
+          <p>Treverk, terrasser, panel og listverk får ny glans og beskyttelse med riktig beis eller lakk. Vi tilpasser produktvalget til underlaget og ønsket uttrykk — fra naturlig treverk til dekkende farger.</p>
+          <div class="service-photos">
+            <figure><img src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Værslitt treverk før beising"></figure>
+            <figure><img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Beising av treverk"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <h3>Annet malerarbeid</h3>
+          <p>Lister, dører, trapper, garasjer, hagestuer eller mindre spesialoppdrag — ta kontakt så finner vi en løsning. Ingen jobb er for liten til en uforpliktende prat.</p>
+          <div class="service-photos">
+            <figure><img src="unnamed (2).webp" alt="Rom under oppussing"></figure>
+            <figure><img src="unnamed (5).webp" alt="Ferdig rom med varme farger"></figure>
+          </div>
+          <div class="price">Fra 595 kr/t · Gratis befaring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE CHECKLIST -->
+  <section class="section bg-cream">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Hvorfor velge oss</span>
+      <h2 class="section-title reveal">Det som skiller Ozolins Maler</h2>
+      <ul class="checklist" style="margin-top:2.5rem">
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Fagbrev maler — håndverk utført etter fagets standarder, ikke gjettverk.</span>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Gratis befaring og fast pristilbud før jobben starter — ingen overraskelser på fakturaen.</span>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Grundig tildekking av møbler og gulv — hjemmet ditt behandles med respekt.</span>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Vi rydder og vasker etter oss hver eneste dag — ingen rot som blir liggende.</span>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Tett og personlig dialog gjennom hele prosjektet — du vet alltid hva som skjer.</span>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Lokalt firma i Moss — vi kjenner husene, klimaet og hva som faktisk varer.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Slik jobber vi</span>
+      <h2 class="section-title reveal">Fra første kontakt til ferdig resultat</h2>
+      <div class="process-steps" style="margin-top:2.5rem">
+        <div class="process-step reveal">
+          <span class="num">01</span>
+          <h3>Befaring</h3>
+          <p>Vi kommer hjem til deg, vurderer jobben og svarer på spørsmål — helt uforpliktende og gratis.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">02</span>
+          <h3>Tilbud</h3>
+          <p>Du får et klart, skriftlig pristilbud med omfang, tidsbruk og pris — ingen skjulte kostnader.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">03</span>
+          <h3>Utførelse</h3>
+          <p>Vi utfører arbeidet på avtalt tid, med grundig tildekking og daglig opprydding underveis.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">04</span>
+          <h3>Overlevering</h3>
+          <p>Felles gjennomgang av resultatet, og vi rydder fullstendig før vi forlater stedet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="section-inner reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <h2 class="section-title">Usikker på hva du trenger?</h2>
+      <p class="section-lead" style="margin:0 auto 2rem">Book en gratis befaring, så hjelper vi deg å finne riktig løsning for ditt prosjekt.</p>
+      <a href="#bestilling" class="btn btn-dark">Få gratis befaring</a>
+    </div>
+  </section>
+
+</div>
+<!-- ============ PAGE 3: BESTILLING ============ -->
+<div class="page" id="page-bestilling" data-title="Book befaring | Ozolins Maler Moss" data-desc="Book gratis befaring hos Ozolins Maler i Moss — velg time direkte i kalenderen eller send oss en forespørsel.">
+
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <img src="https://images.pexels.com/photos/19866414/pexels-photo-19866414.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Lyst, nyoppusset rom klart for befaring">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Bestilling</h1></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Hva skjer etterpå</span>
+      <h2 class="section-title reveal">Enkelt å komme i gang</h2>
+      <div class="process-steps" style="margin-top:2.5rem">
+        <div class="process-step reveal">
+          <span class="num">01</span>
+          <h3>Du sender forespørsel</h3>
+          <p>Velg en tid i kalenderen, eller send oss informasjon om jobben via skjemaet under.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">02</span>
+          <h3>Vi tar kontakt</h3>
+          <p>Du hører fra oss innen 24 timer for å avtale tidspunkt for befaring.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">03</span>
+          <h3>Gratis befaring</h3>
+          <p>Vi kommer hjem til deg, vurderer omfanget og gir deg et skriftlig pristilbud.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="num">04</span>
+          <h3>Du bestemmer</h3>
+          <p>Helt uforpliktende — du velger selv om og når du vil gå videre med jobben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PATHS -->
+  <section class="section bg-cream">
+    <div class="section-inner">
+      <div class="grid-2">
+        <div class="reveal">
+          <h3 style="font-size:1.5rem;margin-bottom:1rem">Velg en tid som passer deg</h3>
+          <div class="booking-card">
+            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/post-studionett/ozolins-maler" style="min-width:280px;height:680px;"></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 style="font-size:1.5rem;margin-bottom:1rem">Foretrekker du å sende melding?</h3>
+          <div class="booking-card">
+            <form id="booking-form" novalidate>
+              <input type="hidden" name="_subject" value="Ny bookingforespørsel — Ozolins Maler">
+              <div class="form-grid cols-2">
+                <div class="field">
+                  <label for="b-navn">Navn</label>
+                  <input type="text" id="b-navn" name="navn" required aria-required="true" aria-describedby="err-b-navn">
+                  <span class="field-error" id="err-b-navn"></span>
+                </div>
+                <div class="field">
+                  <label for="b-telefon">Telefon</label>
+                  <input type="tel" id="b-telefon" name="telefon" required aria-required="true" aria-describedby="err-b-telefon">
+                  <span class="field-error" id="err-b-telefon"></span>
+                </div>
+                <div class="field">
+                  <label for="b-epost">E-post</label>
+                  <input type="email" id="b-epost" name="epost" required aria-required="true" aria-describedby="err-b-epost">
+                  <span class="field-error" id="err-b-epost"></span>
+                </div>
+                <div class="field">
+                  <label for="b-postnummer">Postnummer</label>
+                  <input type="text" id="b-postnummer" name="postnummer" inputmode="numeric" required aria-required="true" aria-describedby="err-b-postnummer">
+                  <span class="field-error" id="err-b-postnummer"></span>
+                </div>
+                <div class="field">
+                  <label for="b-tjeneste">Tjeneste</label>
+                  <select id="b-tjeneste" name="tjeneste" required aria-required="true" aria-describedby="err-b-tjeneste">
+                    <option value="">Velg tjeneste</option>
+                    <option value="Innvendig maling">Innvendig maling</option>
+                    <option value="Utvendig maling">Utvendig maling</option>
+                    <option value="Tapetsering">Tapetsering</option>
+                    <option value="Sparkeling og pussing">Sparkeling og pussing</option>
+                    <option value="Betonggulv og epoxy">Betonggulv og epoxy</option>
+                    <option value="Beising">Beising</option>
+                    <option value="Annet">Annet</option>
+                  </select>
+                  <span class="field-error" id="err-b-tjeneste"></span>
+                </div>
+                <div class="field">
+                  <label for="b-dato">Ønsket dato</label>
+                  <input type="date" id="b-dato" name="onsket_dato" aria-describedby="err-b-dato">
+                  <span class="field-error" id="err-b-dato"></span>
+                </div>
+              </div>
+              <div class="field" style="margin-top:1.2rem">
+                <label for="b-melding">Beskrivelse av jobben</label>
+                <textarea id="b-melding" name="beskrivelse" rows="4" required aria-required="true" aria-describedby="err-b-melding"></textarea>
+                <span class="field-error" id="err-b-melding"></span>
+              </div>
+              <button type="submit" class="btn btn-dark" style="margin-top:1rem">Send forespørsel</button>
+              <p class="form-msg" id="booking-msg" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASSURANCE -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <div class="cred-strip">
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Svar innen 24 timer</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Ingen bindingstid</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 6v6c0 5 3.8 9 9 10 5.2-1 9-5 9-10V6l-9-4Z"/></svg>
+          <span>Gratis befaring · Ingen forpliktelser</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-cream">
+    <div class="section-inner" style="max-width:840px">
+      <span class="eyebrow reveal">Ofte stilte spørsmål</span>
+      <h2 class="section-title reveal">Spørsmål før du booker</h2>
+      <div style="margin-top:2rem">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+            <span>Hva koster det å male hos meg?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+            <div class="faq-a-inner">Prisen avhenger av flatemål, underlagets tilstand og type maling. Vi tar utgangspunkt i en timepris fra 595 kr/t, men du får alltid et fast pristilbud etter en gratis befaring — slik at du vet nøyaktig hva jobben koster før vi starter.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+            <span>Hvor lang tid tar et malerprosjekt?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+            <div class="faq-a-inner">Et standard rom tar normalt 1–3 dager avhengig av forarbeid og antall strøk. Større prosjekter som hele leiligheter eller fasader avtales individuelt under befaringen, og du får alltid en tydelig tidsplan i tilbudet.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+            <span>Må jeg flytte ut møblene selv?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+            <div class="faq-a-inner">Nei, det trenger du ikke. Vi flytter møbler til midten av rommet og dekker alt grundig med plast og dekkpapp. Ved store eller tunge gjenstander setter vi pris på om de er flyttet på forhånd, men dette er ikke et krav.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+            <span>Lukter det mye, og hvor lang er tørketiden?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+            <div class="faq-a-inner">Vi bruker hovedsakelig vannbasert maling med lav lukt, som er trygt å oppholde seg i nærheten av. Overflaten er normalt tørr å ta på etter 2–4 timer, men vi anbefaler å vente minst et døgn før møbler settes tilbake mot veggen.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+            <span>Kan dere male utvendig om vinteren?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-btn-5">
+            <div class="faq-a-inner">Utvendig maling krever temperaturer over ca. 5 °C og tørt underlag, så hovedsesongen er fra april til oktober. Vi tar gjerne befaring og avtaler tidspunkt om vinteren, slik at du står først i køen når sesongen starter.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
+            <span>Hvordan betaler jeg, og får jeg kvittering?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a" id="faq-6" role="region" aria-labelledby="faq-btn-6">
+            <div class="faq-a-inner">Du mottar en spesifisert faktura etter fullført arbeid, med klar oversikt over timer, materialer og totalpris i tråd med det avtalte tilbudet. Som registrert ENK med org.nr. 936 481 558 MVA leverer vi alt på korrekt og ryddig vis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ============ PAGE 4: OM OSS ============ -->
+<div class="page" id="page-om-oss" data-title="Om oss | Ozolins Maler — Maler i Moss" data-desc="Møt Vairis Ozolins, fagutdannet maler og gründer av Ozolins Maler i Moss. Håndverk, ærlighet og kvalitet i hvert prosjekt.">
+
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <img src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler i arbeidstøy med malerrull">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Om oss</h1></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section bg-light">
+    <div class="section-inner grid-2">
+      <div class="reveal">
+        <span class="eyebrow">Gründeren</span>
+        <h2 class="section-title">Vairis Ozolins</h2>
+        <p style="margin-bottom:1.2rem">Vairis Ozolins (f. 1996) startet Ozolins Maler i Moss med ett mål for øyet: å levere malerarbeid som holder mål — både faglig og menneskelig. Med fagbrev som maler i bunn har han bygget opp en hverdag der nøyaktighet, ryddighet og ærlig kommunikasjon er like viktig som selve strøket på veggen.</p>
+        <p style="margin-bottom:1.2rem">Som registrert ENK (org.nr. 936 481 558 MVA) tar Ozolins Maler oppdrag for både private og næringsdrivende i Moss-regionen — fra mindre rom til hele fasader. Hvert prosjekt starter med en gratis befaring, slik at du vet nøyaktig hva som skal gjøres og hva det koster, før noe penselstrøk er satt.</p>
+        <p>Etter det første driftsåret har bedriften allerede levert over 20 fullførte oppdrag i regionen — med fokus på faglig stolthet, ryddig fremgangsmåte og ingen overraskelser underveis.</p>
+      </div>
+      <div class="reveal">
+        <!-- ABOUT — replace with: portrait of owner/team in work gear, confident and approachable -->
+        <img src="https://images.pexels.com/photos/18888497/pexels-photo-18888497.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Vairis Ozolins, eier og fagutdannet maler i Ozolins Maler" style="width:100%;height:100%;object-fit:cover;border-radius:0;min-height:340px">
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section bg-cream">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Veien hit</span>
+      <h2 class="section-title reveal">Milepæler</h2>
+      <div class="timeline" style="margin-top:2.5rem;max-width:640px">
+        <div class="timeline-item reveal">
+          <div class="year">1996</div>
+          <p>Vairis Ozolins blir født — starten på en lang fagvei innen håndverk.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="year">2025</div>
+          <p>Ozolins Maler etableres som registrert ENK i Moss, med fagbrev som maler i bunn.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="year">2026</div>
+          <p>Over 20 fullførte oppdrag for private og næringsdrivende i Moss-regionen — og flere på vei.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <div class="cred-strip">
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 6v6c0 5 3.8 9 9 10 5.2-1 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Fagbrev maler</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+          <span>Registrert ENK · Org.nr. 936 481 558 MVA</span>
+        </div>
+        <div class="cred-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Gratis befaring og pristilbud</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section bg-cream">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Våre verdier</span>
+      <h2 class="section-title reveal">Det vi alltid står for</h2>
+      <div class="grid-3" style="margin-top:2.5rem">
+        <div class="value-card reveal">
+          <h3 style="font-size:1.4rem;margin-bottom:.6rem">Faglig stolthet</h3>
+          <p style="opacity:.78">Vi gjør jobben skikkelig fra første strøk — riktig forarbeid, riktig produkt og et resultat vi selv ville hatt på våre egne vegger.</p>
+        </div>
+        <div class="value-card reveal">
+          <h3 style="font-size:1.4rem;margin-bottom:.6rem">Ryddig og pålitelig</h3>
+          <p style="opacity:.78">Vi møter til avtalt tid, tildekker grundig og rydder etter oss hver dag — hjemmet ditt skal kjennes ivaretatt gjennom hele prosessen.</p>
+        </div>
+        <div class="value-card reveal">
+          <h3 style="font-size:1.4rem;margin-bottom:.6rem">Ingen overraskelser</h3>
+          <p style="opacity:.78">Du får et fast pristilbud før vi starter. Det du blir lovet, er det du får — på tid, omfang og pris.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <h2 class="section-title">Bli kjent med oss over en kopp kaffe</h2>
+      <p class="section-lead" style="margin:0 auto 2rem">Book en gratis befaring, så møtes vi hjemme hos deg og snakker om prosjektet ditt.</p>
+      <a href="#bestilling" class="btn btn-dark">Få gratis befaring</a>
+    </div>
+  </section>
+
+</div>
+<!-- ============ PAGE 5: GALLERI ============ -->
+<div class="page" id="page-galleri" data-title="Galleri | Ozolins Maler — Maler i Moss" data-desc="Se eksempler på fullførte malerprosjekter fra Ozolins Maler i Moss — innvendig, utvendig, tapetsering og mer.">
+
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <!-- GALLERI HERO — replace with: detail shot of fresh paint texture on wall -->
+      <img src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nærbilde av malerpensler og verktøy">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Galleri</h1></div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="eyebrow reveal">Utvalgte prosjekter</span>
+      <h2 class="section-title reveal">Et innblikk i arbeidet vårt</h2>
+      <div class="gallery-grid" style="margin-top:2.5rem">
+        <div class="gallery-item reveal">
+          <span class="gallery-num" aria-hidden="true">I</span>
+          <img src="https://images.pexels.com/photos/12281845/pexels-photo-12281845.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ferdig malt stue i lyse, varme farger">
+          <div class="gallery-cap">Innvendig maling — ferdig resultat</div>
+        </div>
+        <div class="gallery-item reveal">
+          <span class="gallery-num" aria-hidden="true">II</span>
+          <img src="https://images.pexels.com/photos/11622889/pexels-photo-11622889.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hus med nymalt fasade i varm farge">
+          <div class="gallery-cap">Utvendig maling og fasade</div>
+        </div>
+        <div class="gallery-item reveal">
+          <!-- GALLERY 3 — replace with: tapetsering og detaljer, mønstret tapet på vegg -->
+          <span class="gallery-num" aria-hidden="true">III</span>
+          <img src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nymontert tapet med mønster på soveromsvegg">
+          <div class="gallery-cap">Tapetsering og detaljer</div>
+        </div>
+        <div class="gallery-item reveal">
+          <span class="gallery-num" aria-hidden="true">IV</span>
+          <img src="https://images.pexels.com/photos/6474483/pexels-photo-6474483.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Vegg under sparkling og pussing før maling">
+          <div class="gallery-cap">Sparkeling og pussing</div>
+        </div>
+        <div class="gallery-item reveal">
+          <!-- GALLERY 5 — replace with: beising og overflatebehandling, treverk/terrasse -->
+          <span class="gallery-num" aria-hidden="true">V</span>
+          <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Beising av treverk med pensel">
+          <div class="gallery-cap">Beising og overflatebehandling</div>
+        </div>
+        <div class="gallery-item reveal">
+          <span class="gallery-num" aria-hidden="true">VI</span>
+          <img src="https://images.pexels.com/photos/7218009/pexels-photo-7218009.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Malere i arbeid på oppdrag i Moss">
+          <div class="gallery-cap">Team i aksjon på jobb</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="section-inner reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center">
+      <h2 class="section-title">Liker det du ser?</h2>
+      <p class="section-lead" style="margin:0 auto 2rem">Book en gratis befaring, så finner vi ut hvordan vi kan gjøre det samme for deg.</p>
+      <a href="#bestilling" class="btn btn-dark">Book i dag</a>
+    </div>
+  </section>
+
+</div>
+<!-- ============ PAGE 7: KONTAKT ============ -->
+<div class="page" id="page-kontakt" data-title="Kontakt | Ozolins Maler — Maler i Moss" data-desc="Ta kontakt med Ozolins Maler i Moss for gratis befaring og pristilbud. Telefon, e-post, adresse og åpningstider.">
+
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <!-- KONTAKT HERO — replace with: cozy freshly painted entryway or storefront -->
+      <img src="https://images.pexels.com/photos/5583056/pexels-photo-5583056.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Verktøy og malingsutstyr klart for oppdrag">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Kontakt</h1></div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner grid-2">
+      <div class="reveal">
+        <span class="eyebrow">Ta kontakt</span>
+        <h2 class="section-title">Vi svarer raskt</h2>
+        <ul class="contact-list" style="margin:1.5rem 0 2.5rem">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.95.36 1.88.69 2.77a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.31-1.21a2 2 0 0 1 2.11-.45c.89.33 1.82.56 2.77.69A2 2 0 0 1 22 16.92Z"/></svg>
+            <div><a href="tel:96712468">967 12 468</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <div><a href="mailto:post@ozolins-maler.no">post@ozolins-maler.no</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>Karlstadveien 19, 1516 Moss</div>
+          </li>
+        </ul>
+
+        <h3 style="font-size:1.3rem;margin-bottom:1rem">Åpningstider</h3>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Mandag–fredag</td><td>07:00–17:00</td></tr>
+            <tr><td>Lørdag</td><td>08:00–14:00</td></tr>
+            <tr><td>Søndag</td><td>Stengt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="reveal">
+        <h3 style="font-size:1.3rem;margin-bottom:1rem">Send oss en melding</h3>
+        <form id="contact-form" novalidate>
+          <input type="hidden" name="_subject" value="Ny kontakthenvendelse — Ozolins Maler">
+          <div class="form-grid">
+            <div class="field">
+              <label for="c-navn">Navn</label>
+              <input type="text" id="c-navn" name="navn" required aria-required="true" aria-describedby="err-c-navn">
+              <span class="field-error" id="err-c-navn"></span>
+            </div>
+            <div class="field">
+              <label for="c-telefon">Telefon</label>
+              <input type="tel" id="c-telefon" name="telefon" required aria-required="true" aria-describedby="err-c-telefon">
+              <span class="field-error" id="err-c-telefon"></span>
+            </div>
+            <div class="field">
+              <label for="c-epost">E-post</label>
+              <input type="email" id="c-epost" name="epost" required aria-required="true" aria-describedby="err-c-epost">
+              <span class="field-error" id="err-c-epost"></span>
+            </div>
+            <div class="field">
+              <label for="c-melding">Melding</label>
+              <textarea id="c-melding" name="melding" rows="4" required aria-required="true" aria-describedby="err-c-melding"></textarea>
+              <span class="field-error" id="err-c-melding"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark" style="margin-top:1.2rem">Send melding</button>
+          <p class="form-msg" id="contact-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="section-inner reveal">
+      <span class="eyebrow">Finn oss</span>
+      <h2 class="section-title">Karlstadveien 19, 1516 Moss</h2>
+      <iframe class="map-frame" style="margin-top:1.5rem" src="https://maps.google.com/maps?q=Karlstadveien%2019%2C%201516%20MOSS&t=&z=14&ie=UTF8&iwloc=&output=embed" title="Kart over Ozolins Malers adresse i Moss" loading="lazy"></iframe>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<div class="mob-sticky">
+  <a href="tel:96712468" class="phone">967 12 468</a>
+  <a href="tel:96712468" class="btn btn-primary">Ring nå</a>
+</div>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="unnamed-Photoroom.png" alt="Ozolins Maler logo"> Ozolins Maler</div>
+      <p class="footer-tagline">Håndverk du kan stole på — siden 2025.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sidekart</h4>
+      <ul>
+        <li><a href="#hjem">Hjem</a></li>
+        <li><a href="#tjenester">Tjenester</a></li>
+        <li><a href="#bestilling">Bestilling</a></li>
+        <li><a href="#om-oss">Om oss</a></li>
+        <li><a href="#galleri">Galleri</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:96712468">967 12 468</a></li>
+        <li><a href="mailto:post@ozolins-maler.no">post@ozolins-maler.no</a></li>
+        <li><p>Karlstadveien 19, 1516 Moss</p></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Finn oss</h4>
+      <iframe class="footer-map" src="https://maps.google.com/maps?q=Karlstadveien%2019%2C%201516%20MOSS&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Kart over Ozolins Malers adresse i Moss" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ozolins Maler. Alle rettigheter forbeholdt.</span>
+    <span>Org.nr. 936 481 558 MVA</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const FORM_ENDPOINT = 'https://formspree.io/f/mwvjnyvz';
+
+  /* ---------- NAV SCROLL STATE ---------- */
+  const nav = document.getElementById('nav');
+  const scrollBar = document.getElementById('scrollBar');
+  function onScroll(){
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    if(scrollBar) scrollBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- MOBILE NAV ---------- */
+  const hbg = document.getElementById('hbg');
+  const mobNav = document.getElementById('mob-nav');
+  function closeMobileNav(){
+    hbg.classList.remove('open');
+    hbg.setAttribute('aria-expanded','false');
+    mobNav.classList.remove('open');
+  }
+  hbg.addEventListener('click', () => {
+    const open = mobNav.classList.toggle('open');
+    hbg.classList.toggle('open', open);
+    hbg.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hbg.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
+  });
+  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+
+  /* ---------- SCROLL REVEAL ---------- */
+  let revealObserver;
+  function initReveal(){
+    if(revealObserver) revealObserver.disconnect();
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const items = document.querySelectorAll('.page.active .reveal');
+    if(reduced){
+      items.forEach(el => el.classList.add('visible'));
+      return;
+    }
+    document.body.classList.add('js-ready');
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if(entry.isIntersecting){
+          setTimeout(() => entry.target.classList.add('visible'), i % 6 * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    items.forEach(el => revealObserver.observe(el));
+  }
+
+  /* ---------- ROUTING ---------- */
+  const pages = document.querySelectorAll('.page');
+  const navLinks = document.querySelectorAll('[data-route]');
+  const validRoutes = ['hjem','tjenester','bestilling','om-oss','galleri','kontakt'];
+
+  function setRoute(){
+    let hash = location.hash.replace('#','') || 'hjem';
+    if(!validRoutes.includes(hash)) hash = 'hjem';
+    pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + hash));
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.route === hash));
+
+    const activePage = document.getElementById('page-' + hash);
+    if(activePage){
+      const title = activePage.dataset.title;
+      const desc = activePage.dataset.desc;
+      if(title){
+        document.getElementById('page-title').textContent = title;
+        document.getElementById('og-title').setAttribute('content', title);
+      }
+      if(desc){
+        document.getElementById('page-description').setAttribute('content', desc);
+        document.getElementById('og-description').setAttribute('content', desc);
+      }
+    }
+    window.scrollTo(0,0);
+    closeMobileNav();
+    initReveal();
+  }
+  window.addEventListener('hashchange', setRoute);
+  setRoute();
+
+  /* ---------- FAQ ACCORDION ---------- */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(other => {
+        if(other !== btn){
+          other.setAttribute('aria-expanded','false');
+          document.getElementById(other.getAttribute('aria-controls')).classList.remove('open');
+        }
+      });
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      panel.classList.toggle('open', !isOpen);
+    });
+  });
+
+  /* ---------- NEWSLETTER FORMS ---------- */
+  ['home','footer'].forEach(suffix => {
+    const form = document.getElementById('newsletter-form-' + suffix);
+    const msg = document.getElementById('newsletter-msg-' + suffix);
+    if(!form) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      if(!email){
+        msg.textContent = 'Vennligst fyll inn en gyldig e-postadresse.';
+        msg.className = 'form-msg error';
+        return;
+      }
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Sender...';
+      try{
+        const res = await fetch(FORM_ENDPOINT, {
+          method:'POST',
+          headers:{'Accept':'application/json'},
+          body:new FormData(form)
+        });
+        if(res.ok){
+          msg.textContent = 'Takk! Vi tar kontakt innen 24 timer.';
+          msg.className = 'form-msg success';
+          form.reset();
+        } else {
+          throw new Error('fail');
+        }
+      } catch(err){
+        msg.textContent = 'Noe gikk galt. Ring oss direkte på 967 12 468.';
+        msg.className = 'form-msg error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  });
+
+  /* ---------- FIELD VALIDATION HELPERS ---------- */
+  function validateField(field, errEl, message){
+    if(!field.value.trim()){
+      errEl.textContent = message;
+      return false;
+    }
+    errEl.textContent = '';
+    return true;
+  }
+
+  /* ---------- BOOKING FORM ---------- */
+  const bookingForm = document.getElementById('booking-form');
+  if(bookingForm){
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const navn = bookingForm.querySelector('#b-navn');
+      const telefon = bookingForm.querySelector('#b-telefon');
+      const epost = bookingForm.querySelector('#b-epost');
+      const postnummer = bookingForm.querySelector('#b-postnummer');
+      const tjeneste = bookingForm.querySelector('#b-tjeneste');
+      const melding = bookingForm.querySelector('#b-melding');
+      const msg = document.getElementById('booking-msg');
+
+      let valid = true;
+      valid = validateField(navn, document.getElementById('err-b-navn'), 'Vennligst fyll inn navnet ditt.') && valid;
+      valid = validateField(telefon, document.getElementById('err-b-telefon'), 'Vennligst fyll inn telefonnummer.') && valid;
+      valid = validateField(epost, document.getElementById('err-b-epost'), 'Vennligst fyll inn e-postadresse.') && valid;
+      valid = validateField(postnummer, document.getElementById('err-b-postnummer'), 'Vennligst fyll inn postnummer.') && valid;
+      valid = validateField(tjeneste, document.getElementById('err-b-tjeneste'), 'Vennligst velg en tjeneste.') && valid;
+      valid = validateField(melding, document.getElementById('err-b-melding'), 'Vennligst beskriv jobben kort.') && valid;
+
+      if(!valid){
+        msg.textContent = '';
+        return;
+      }
+
+      const submitBtn = bookingForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Sender...';
+      try{
+        const res = await fetch(FORM_ENDPOINT, {
+          method:'POST',
+          headers:{'Accept':'application/json'},
+          body:new FormData(bookingForm)
+        });
+        if(res.ok){
+          msg.textContent = 'Takk! Vi tar kontakt innen 24 timer.';
+          msg.className = 'form-msg success';
+          bookingForm.reset();
+        } else {
+          throw new Error('fail');
+        }
+      } catch(err){
+        msg.textContent = 'Noe gikk galt. Ring oss direkte på 967 12 468.';
+        msg.className = 'form-msg error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  }
+
+  /* ---------- CONTACT FORM ---------- */
+  const contactForm = document.getElementById('contact-form');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const navn = contactForm.querySelector('#c-navn');
+      const telefon = contactForm.querySelector('#c-telefon');
+      const epost = contactForm.querySelector('#c-epost');
+      const melding = contactForm.querySelector('#c-melding');
+      const msg = document.getElementById('contact-msg');
+
+      let valid = true;
+      valid = validateField(navn, document.getElementById('err-c-navn'), 'Vennligst fyll inn navnet ditt.') && valid;
+      valid = validateField(telefon, document.getElementById('err-c-telefon'), 'Vennligst fyll inn telefonnummer.') && valid;
+      valid = validateField(epost, document.getElementById('err-c-epost'), 'Vennligst fyll inn e-postadresse.') && valid;
+      valid = validateField(melding, document.getElementById('err-c-melding'), 'Vennligst skriv en melding.') && valid;
+
+      if(!valid){
+        msg.textContent = '';
+        return;
+      }
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Sender...';
+      try{
+        const res = await fetch(FORM_ENDPOINT, {
+          method:'POST',
+          headers:{'Accept':'application/json'},
+          body:new FormData(contactForm)
+        });
+        if(res.ok){
+          msg.textContent = 'Takk! Vi tar kontakt innen 24 timer.';
+          msg.className = 'form-msg success';
+          contactForm.reset();
+        } else {
+          throw new Error('fail');
+        }
+      } catch(err){
+        msg.textContent = 'Noe gikk galt. Ring oss direkte på 967 12 468.';
+        msg.className = 'form-msg error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

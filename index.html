@@ -13,7 +13,7 @@
 <meta id="og-description" property="og:description" content="Ozolins Maler i Moss — håndverk du kan stole på. Gratis befaring og pristilbud innen 24 timer.">
 <meta property="og:image" content="https://images.pexels.com/photos/7218579/pexels-photo-7218579.jpeg?auto=compress&cs=tinysrgb&w=1920">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ozolins Maler","image":"https://images.pexels.com/photos/7218579/pexels-photo-7218579.jpeg?auto=compress&cs=tinysrgb&w=1920","telephone":"+4796712468","email":"post@ozolins-maler.no","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Karlstadveien 19","postalCode":"1516","addressLocality":"Moss","addressCountry":"NO"},"openingHours":["Mo-Fr 07:00-17:00","Sa 08:00-14:00"],"founder":{"@type":"Person","name":"Vairis Ozolins"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ozolins Maler","image":"https://images.pexels.com/photos/7218579/pexels-photo-7218579.jpeg?auto=compress&cs=tinysrgb&w=1920","telephone":"+4796712468","email":"vozmaler@gmail.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Karlstadveien 19","postalCode":"1516","addressLocality":"Moss","addressCountry":"NO"},"openingHours":["Mo-Fr 07:00-17:00","Sa 08:00-14:00"],"founder":{"@type":"Person","name":"Vairis Ozolins"}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,8 @@
   --error-dark:#e8a3a3;
   --error-light:#b3261e;
   --success-light:#7a5c2e;
+  --splat-green:#7C8F6E;
+  --splat-blue:#6B82A3;
   --ink:#221F1C;
   --mid:#6B5F54;
   --faint:#8A7D6E;
@@ -224,10 +226,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .testimonial-loc{font-size:.85rem;opacity:.65}
 
 /* CRED STRIP */
-.cred-strip{display:grid;gap:1.6rem}
+.cred-strip{display:grid;gap:1.6rem;position:relative;z-index:1}
 @media(min-width:700px){.cred-strip{grid-template-columns:repeat(3,1fr)}}
 .cred-item{display:flex;align-items:center;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
 .cred-item svg{width:36px;height:36px;flex-shrink:0;color:var(--sand)}
+
+/* PAINT SPLATTERS */
+.splatter{position:absolute;pointer-events:none;z-index:0;opacity:.5}
+.splatter svg{display:block;width:100%;height:100%}
+.splatter--sand{color:var(--sand-l)}
+.splatter--green{color:var(--splat-green)}
+.splatter--blue{color:var(--splat-blue)}
 .cred-item span{font-family:var(--font-body);font-weight:400;font-size:.85rem;letter-spacing:.06em}
 
 /* NEWSLETTER */
@@ -385,7 +394,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
       </div>
     </div>
     <div class="hero-right">
-      <img src="unnamed (9).webp" alt="Korridor under malerarbeid i grønne, varme toner">
+      <img src="maler-bilde-3.jpg" alt="Maler på stillas som maler tak">
       <span class="hero-vert">Moss · Østfold</span>
       <div class="hero-badge">
         <span class="hero-badge-num">20+</span>
@@ -884,7 +893,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
           </button>
           <div class="faq-a" id="faq-6" role="region" aria-labelledby="faq-btn-6">
-            <div class="faq-a-inner">Du mottar en spesifisert faktura etter fullført arbeid, med klar oversikt over timer, materialer og totalpris i tråd med det avtalte tilbudet. Som registrert ENK med org.nr. 936 481 558 MVA leverer vi alt på korrekt og ryddig vis.</div>
+            <div class="faq-a-inner">Du mottar en spesifisert faktura etter fullført arbeid, med klar oversikt over timer, materialer og totalpris i tråd med det avtalte tilbudet.</div>
           </div>
         </div>
       </div>
@@ -910,7 +919,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
         <span class="eyebrow">Gründeren</span>
         <h2 class="section-title">Vairis Ozolins</h2>
         <p style="margin-bottom:1.2rem">Vairis Ozolins (f. 1996) startet Ozolins Maler i Moss med ett mål for øyet: å levere malerarbeid som holder mål — både faglig og menneskelig. Med fagbrev som maler i bunn har han bygget opp en hverdag der nøyaktighet, ryddighet og ærlig kommunikasjon er like viktig som selve strøket på veggen.</p>
-        <p style="margin-bottom:1.2rem">Som registrert ENK (org.nr. 936 481 558 MVA) tar Ozolins Maler oppdrag for både private og næringsdrivende i Moss-regionen — fra mindre rom til hele fasader. Hvert prosjekt starter med en gratis befaring, slik at du vet nøyaktig hva som skal gjøres og hva det koster, før noe penselstrøk er satt.</p>
+        <p style="margin-bottom:1.2rem">Ozolins Maler tar oppdrag for både private og næringsdrivende i Moss-regionen — fra mindre rom til hele fasader. Hvert prosjekt starter med en gratis befaring, slik at du vet nøyaktig hva som skal gjøres og hva det koster, før noe penselstrøk er satt.</p>
         <p>Etter det første driftsåret har bedriften allerede levert over 20 fullførte oppdrag i regionen — med fokus på faglig stolthet, ryddig fremgangsmåte og ingen overraskelser underveis.</p>
       </div>
       <div class="reveal">
@@ -931,7 +940,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
         </li>
         <li class="timeline-item reveal">
           <div class="year">2025</div>
-          <p>Ozolins Maler etableres som registrert ENK i Moss, med fagbrev som maler i bunn.</p>
+          <p>Ozolins Maler etableres i Moss, med fagbrev som maler i bunn.</p>
         </li>
         <li class="timeline-item reveal">
           <div class="year">2026</div>
@@ -942,7 +951,16 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </section>
 
   <!-- CREDENTIALS -->
-  <section class="section bg-light">
+  <section class="section bg-light" style="position:relative;overflow:hidden">
+    <div class="splatter splatter--sand" aria-hidden="true" style="top:1.5rem;right:6%;width:70px;height:70px;transform:rotate(-8deg)">
+      <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 8c11 0 20 9 20 19 0 6-3 12-8 15 9 2 16 10 16 19 0 12-10 22-22 22s-22-10-22-22c0-8 4-15 11-19-6-3-10-9-10-17C35 16 43 8 50 8z"/><circle cx="82" cy="58" r="6"/><circle cx="14" cy="74" r="4"/></svg>
+    </div>
+    <div class="splatter splatter--green" aria-hidden="true" style="bottom:1rem;left:3%;width:46px;height:46px;transform:rotate(24deg)">
+      <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 8c11 0 20 9 20 19 0 6-3 12-8 15 9 2 16 10 16 19 0 12-10 22-22 22s-22-10-22-22c0-8 4-15 11-19-6-3-10-9-10-17C35 16 43 8 50 8z"/><circle cx="82" cy="58" r="6"/><circle cx="14" cy="74" r="4"/></svg>
+    </div>
+    <div class="splatter splatter--blue" aria-hidden="true" style="top:45%;right:30%;width:30px;height:30px;transform:rotate(10deg)">
+      <svg viewBox="0 0 100 100" fill="currentColor"><circle cx="46" cy="46" r="30"/><circle cx="84" cy="68" r="7"/></svg>
+    </div>
     <div class="section-inner">
       <div class="cred-strip">
         <div class="cred-item reveal">
@@ -950,8 +968,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <span>Fagbrev maler</span>
         </div>
         <div class="cred-item reveal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
-          <span>Registrert ENK · Org.nr. 936 481 558 MVA</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Forsikret og kvalitetssikret</span>
         </div>
         <div class="cred-item reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -1074,7 +1092,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            <div><a href="mailto:post@ozolins-maler.no">post@ozolins-maler.no</a></div>
+            <div><a href="mailto:vozmaler@gmail.com">vozmaler@gmail.com</a></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1162,7 +1180,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
       <h4>Kontakt</h4>
       <ul>
         <li><a href="tel:96712468">967 12 468</a></li>
-        <li><a href="mailto:post@ozolins-maler.no">post@ozolins-maler.no</a></li>
+        <li><a href="mailto:vozmaler@gmail.com">vozmaler@gmail.com</a></li>
         <li><p>Karlstadveien 19, 1516 Moss</p></li>
       </ul>
     </div>
@@ -1173,7 +1191,6 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </div>
   <div class="footer-bottom">
     <span>© 2025–2026 Ozolins Maler. Alle rettigheter forbeholdt.</span>
-    <span>Org.nr. 936 481 558 MVA</span>
   </div>
 </footer>
 

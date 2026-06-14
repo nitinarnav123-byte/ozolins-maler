@@ -25,6 +25,9 @@
   --sand:#B5703A;
   --sand-l:#D99A5F;
   --sand-d:#95592C;
+  --error-dark:#e8a3a3;
+  --error-light:#b3261e;
+  --success-light:#7a5c2e;
   --ink:#221F1C;
   --mid:#6B5F54;
   --faint:#8A7D6E;
@@ -66,7 +69,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .bg-navy .eyebrow::before{background:var(--sand-l)}
 
 /* EYEBROW / LABELS */
-.eyebrow{font-family:var(--font-body);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-d);font-weight:400;display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.eyebrow{font-family:var(--font-body);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-d);font-weight:400;display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
 .eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--sand);opacity:.7}
 .bg-navy .eyebrow{color:var(--sand-l)}
 .section-title{font-family:var(--font-display);font-style:italic;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:300;margin-bottom:1rem;letter-spacing:-.01em}
@@ -80,7 +83,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .gallery-num{position:absolute;top:-1.4rem;left:-.4rem;z-index:2;font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(3.5rem,7vw,6rem);color:var(--bg-light);line-height:1;pointer-events:none;mix-blend-mode:screen;opacity:.6}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 2.1rem;font-family:var(--font-body);font-size:.74rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;border-radius:0;min-height:48px;min-width:44px;transition:transform .2s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .2s var(--ease);cursor:pointer;border:1px solid transparent;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 2.1rem;font-family:var(--font-body);font-size:.78rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;border-radius:0;min-height:48px;min-width:44px;transition:transform .2s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .2s var(--ease);cursor:pointer;border:1px solid transparent;text-align:center}
 @media(prefers-reduced-motion:no-preference){.btn:hover{transform:translateY(-1px)}}
 .btn-primary{background:var(--sand);color:var(--white);box-shadow:none}
 .btn-primary:hover{background:var(--sand-l);box-shadow:none}
@@ -100,7 +103,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .nav-logo img{height:72px;width:auto;display:block}
 .nav-links{display:none;list-style:none;gap:1.9rem;align-items:center}
 @media(min-width:1000px){.nav-links{display:flex}}
-.nav-links a{font-family:var(--font-body);font-size:.78rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.7;transition:opacity .2s,color .2s;padding:.4rem 0;position:relative}
+.nav-links a{font-family:var(--font-body);font-size:.82rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.7;transition:opacity .2s,color .2s;padding:.4rem 0;position:relative}
 .nav-links a:hover,.nav-links a.active{opacity:1;color:var(--sand)}
 .nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--sand)}
 .nav-call{display:none}
@@ -153,7 +156,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-vert{position:absolute;right:1.5rem;bottom:3rem;writing-mode:vertical-rl;font-family:var(--font-body);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);z-index:1}
 .hero-badge{position:absolute;left:-1px;bottom:3rem;background:var(--bg-light);padding:1.2rem 1.5rem;z-index:1}
 .hero-badge-num{font-family:var(--font-display);font-style:italic;font-size:2.5rem;font-weight:300;line-height:1;color:var(--ink);display:block}
-.hero-badge-label{font-family:var(--font-body);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-top:.3rem}
+.hero-badge-label{font-family:var(--font-body);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-top:.3rem}
 @media(prefers-reduced-motion:no-preference){
   .hero-left .eyebrow,.hero-name,.hero-foot{opacity:0;transform:translateY(20px);animation:fadein 1s var(--ease) forwards}
   .hero-name{animation-delay:.12s}
@@ -183,17 +186,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(min-width:800px){.grid-2{grid-template-columns:1fr 1fr;gap:3.5rem}}
 .grid-3{display:grid;gap:2rem}
 @media(min-width:700px){.grid-3{grid-template-columns:repeat(3,1fr)}}
-.grid-4{display:grid;gap:1.6rem}
-@media(min-width:640px){.grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1000px){.grid-4{grid-template-columns:repeat(4,1fr)}}
 
 /* CARDS */
-.card{background:var(--bg-light);border:1px solid rgba(34,31,28,.08);border-radius:0;padding:2rem;height:100%;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
-.bg-cream .card{background:var(--white)}
 .card-icon{width:48px;height:48px;color:var(--sand);margin-bottom:1.2rem}
-.card h3{font-size:1.5rem;margin-bottom:.6rem}
-.card p{opacity:.78;font-size:.96rem}
-@media(prefers-reduced-motion:no-preference){.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -16px rgba(34,31,28,.18);border-color:rgba(181,112,58,.4)}}
+
+/* SERVICE LIST */
+.service-list{display:flex;flex-direction:column}
+.service-row{display:flex;gap:1.6rem;align-items:flex-start;padding:1.8rem 0;border-top:1px solid var(--rule)}
+.service-list .service-row:last-child{border-bottom:1px solid var(--rule)}
+.service-row .card-icon{flex-shrink:0;width:40px;height:40px;margin-bottom:0}
+.service-row h3{font-size:1.25rem;margin-bottom:.4rem}
+.service-row p{opacity:.78;font-size:.95rem;max-width:560px}
+@media(min-width:700px){.service-row{align-items:center}}
 
 /* SERVICE CARD (full page) */
 .service-card{background:var(--white);border:1px solid rgba(34,31,28,.08);border-radius:0;padding:2.4rem;display:flex;flex-direction:column;gap:1rem}
@@ -215,7 +219,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .stars svg{width:18px;height:18px;fill:currentColor}
 .testimonial-card{background:var(--white);border-radius:0;padding:2.2rem;border:1px solid rgba(34,31,28,.08);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 @media(prefers-reduced-motion:no-preference){.testimonial-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px -16px rgba(34,31,28,.18)}}
-.bg-navy .testimonial-card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
 .testimonial-card p{font-size:1.02rem;opacity:.85;margin-bottom:1.2rem}
 .testimonial-name{font-weight:500}
 .testimonial-loc{font-size:.85rem;opacity:.65}
@@ -225,7 +228,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(min-width:700px){.cred-strip{grid-template-columns:repeat(3,1fr)}}
 .cred-item{display:flex;align-items:center;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
 .cred-item svg{width:36px;height:36px;flex-shrink:0;color:var(--sand)}
-.cred-item span{font-family:var(--font-body);font-weight:400;font-size:.8rem;letter-spacing:.06em}
+.cred-item span{font-family:var(--font-body);font-weight:400;font-size:.85rem;letter-spacing:.06em}
 
 /* NEWSLETTER */
 .newsletter-form{display:flex;flex-direction:column;gap:.9rem;max-width:480px;margin-top:1.6rem}
@@ -234,9 +237,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .newsletter-form input::placeholder{color:rgba(255,255,255,.5)}
 .form-msg{margin-top:1rem;font-size:.92rem;font-weight:500}
 .form-msg.success{color:var(--sand)}
-.form-msg.error{color:#e8a3a3}
-.bg-light .form-msg.success,.bg-cream .form-msg.success{color:#7a5c2e}
-.bg-light .form-msg.error,.bg-cream .form-msg.error{color:#b3261e}
+.form-msg.error{color:var(--error-dark)}
+.bg-light .form-msg.success,.bg-cream .form-msg.success{color:var(--success-light)}
+.bg-light .form-msg.error,.bg-cream .form-msg.error{color:var(--error-light)}
 .bg-navy .form-msg.success{color:var(--sand-l)}
 
 /* PROCESS STEPS */
@@ -254,7 +257,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .checklist svg{width:24px;height:24px;color:var(--sand);flex-shrink:0;margin-top:.1rem}
 
 /* TIMELINE */
-.timeline{display:flex;flex-direction:column;gap:1.6rem;border-left:2px solid var(--sand);padding-left:1.6rem}
+.timeline{display:flex;flex-direction:column;gap:1.6rem;border-left:2px solid var(--sand);padding-left:1.6rem;margin:0;list-style:none}
 .timeline-item .year{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--navy)}
 .bg-navy .timeline-item .year{color:var(--sand)}
 
@@ -277,9 +280,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;background:none;border:none;text-align:left;font-family:var(--font-display);font-style:italic;font-size:1.25rem;font-weight:300;color:inherit;cursor:pointer}
 .faq-q svg{width:22px;height:22px;flex-shrink:0;color:var(--sand);transition:transform .25s var(--ease)}
 .faq-q[aria-expanded="true"] svg{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
-.faq-a.open{max-height:480px}
-.faq-a-inner{padding:0 0 1.4rem;opacity:.8;font-size:.97rem}
+.faq-a{display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .3s var(--ease)}
+.faq-a.open{grid-template-rows:1fr}
+.faq-a-inner{min-height:0;padding:0 0 1.4rem;opacity:.8;font-size:.97rem}
 
 /* FORMS */
 .form-grid{display:grid;gap:1.2rem}
@@ -397,26 +400,34 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
       <span class="eyebrow reveal">Hva vi gjør</span>
       <h2 class="section-title reveal">Tjenester med håndverksmessig kvalitet</h2>
       <p class="section-lead reveal">Fra første strøk til siste detalj — vi tar ansvar for hele jobben, slik at du slipper å tenke på den.</p>
-      <div class="grid-4" style="margin-top:3rem">
-        <div class="card reveal">
+      <div class="service-list" style="margin-top:3rem">
+        <div class="service-row reveal">
           <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21v-4a2 2 0 0 1 2-2h2.5l9-9 3.5 3.5-9 9V21H4Z"/><path d="M14.5 6.5l3 3"/></svg>
-          <h3>Innvendig maling</h3>
-          <p>Stue, soverom, kjøkken og bad — rent, presist og uten unødig støy i hverdagen.</p>
+          <div>
+            <h3>Innvendig maling</h3>
+            <p>Stue, soverom, kjøkken og bad — rent, presist og uten unødig støy i hverdagen.</p>
+          </div>
         </div>
-        <div class="card reveal">
+        <div class="service-row reveal">
           <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
-          <h3>Utvendig maling</h3>
-          <p>Fasade, kledning og detaljer som tåler vær og vind i mange år fremover.</p>
+          <div>
+            <h3>Utvendig maling</h3>
+            <p>Fasade, kledning og detaljer som tåler vær og vind i mange år fremover.</p>
+          </div>
         </div>
-        <div class="card reveal">
+        <div class="service-row reveal">
           <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M9 3v18"/></svg>
-          <h3>Tapetsering</h3>
-          <p>Presis oppmåling og sømløs montering — fra mønstrede tapeter til strie.</p>
+          <div>
+            <h3>Tapetsering</h3>
+            <p>Presis oppmåling og sømløs montering — fra mønstrede tapeter til strie.</p>
+          </div>
         </div>
-        <div class="card reveal">
+        <div class="service-row reveal">
           <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l4-4 4 2 6-8 4 5"/><path d="M3 21h18"/></svg>
-          <h3>Sparkeling og pussing</h3>
-          <p>Glatte, jevne flater som gir malingen et resultat som varer.</p>
+          <div>
+            <h3>Sparkeling og pussing</h3>
+            <p>Glatte, jevne flater som gir malingen et resultat som varer.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -424,7 +435,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <!-- CINEMATIC BREAK -->
   <section class="cinematic">
-    <img src="https://images.pexels.com/photos/19866421/pexels-photo-19866421.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+    <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/19866421/pexels-photo-19866421.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
     <div class="overlay"></div>
     <blockquote class="reveal">«Kvalitet du ser — og kjenner.»</blockquote>
   </section>
@@ -526,7 +537,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <section class="page-hero">
     <div class="page-hero-media">
-      <img src="https://images.pexels.com/photos/6764270/pexels-photo-6764270.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler ruller på fersk maling på en vegg under renovering">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6764270/pexels-photo-6764270.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler ruller på fersk maling på en vegg under renovering">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content"><h1>Tjenester</h1></div>
@@ -543,8 +554,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Innvendig maling</h3>
           <p>Vi maler stuer, soverom, kjøkken, bad og hele leiligheter med presisjon og ryddighet. Møbler dekkes til, gulv beskyttes, og vi rydder etter oss hver dag. Du får jevne flater, rene kanter og et resultat som holder i mange år.</p>
           <div class="service-photos">
-            <figure><img src="unnamed (4).webp" alt="Rom under malerarbeid"></figure>
-            <figure><img src="unnamed (7).webp" alt="Ferdig malt rom med varme toner"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (4).webp" alt="Rom under malerarbeid"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (7).webp" alt="Ferdig malt rom med varme toner"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -553,8 +564,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Utvendig maling</h3>
           <p>Fasademaling krever riktig forarbeid — vasking, skraping, grunning og tetting av sprekker. Vi bruker maling tilpasset norsk klima, slik at fargen og overflaten tåler regn, frost og sol i mange sesonger fremover.</p>
           <div class="service-photos">
-            <figure><img src="unnamed (1).webp" alt="Fasadearbeid med stillas i Moss"></figure>
-            <figure><img src="unnamed (3).webp" alt="Eksteriørarbeid i Moss"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (1).webp" alt="Fasadearbeid med stillas i Moss"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (3).webp" alt="Eksteriørarbeid i Moss"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -563,8 +574,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Tapetsering</h3>
           <p>Fra klassisk strie til mønstrede designtapeter — vi måler nøyaktig, sørger for rette skjøter og mønstertilpasning, og leverer et resultat uten synlige overganger. Egnet for stuer, soverom og entréer.</p>
           <div class="service-photos">
-            <figure><img src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Vegg klargjort for tapetsering"></figure>
-            <figure><img src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Nymontert tapet med mønster på vegg"></figure>
+            <figure><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Vegg klargjort for tapetsering"></figure>
+            <figure><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Nymontert tapet med mønster på vegg"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -573,8 +584,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Sparkeling og pussing</h3>
           <p>Ujevne vegger, hull etter spiker eller gamle skader — vi sparkler, sliper og klargjør underlaget slik at malingen legger seg jevnt. Godt forarbeid er halve jobben for et profesjonelt resultat.</p>
           <div class="service-photos">
-            <figure><img src="unnamed (8).webp" alt="Rom under sparkling og pussing"></figure>
-            <figure><img src="unnamed (4).webp" alt="Vegg klargjort for maling etter sparkling"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (8).webp" alt="Rom under sparkling og pussing"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (4).webp" alt="Vegg klargjort for maling etter sparkling"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -583,8 +594,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Betonggulv og epoxy</h3>
           <p>Slitesterke gulv til garasje, kjeller, bod eller næringslokale. Epoxybelegg gir et tett, rengjøringsvennlig og holdbart gulv som tåler både belastning og kjemikalier.</p>
           <div class="service-photos">
-            <figure><img src="unnamed (8).webp" alt="Betonggulv før behandling"></figure>
-            <figure><img src="unnamed (6).webp" alt="Ferdig gulv i nyoppusset rom"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (8).webp" alt="Betonggulv før behandling"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (6).webp" alt="Ferdig gulv i nyoppusset rom"></figure>
           </div>
           <div class="price">Pris etter befaring</div>
         </div>
@@ -593,8 +604,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Beising og overflatebehandling</h3>
           <p>Treverk, terrasser, panel og listverk får ny glans og beskyttelse med riktig beis eller lakk. Vi tilpasser produktvalget til underlaget og ønsket uttrykk — fra naturlig treverk til dekkende farger.</p>
           <div class="service-photos">
-            <figure><img src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Værslitt treverk før beising"></figure>
-            <figure><img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Beising av treverk"></figure>
+            <figure><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Værslitt treverk før beising"></figure>
+            <figure><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Beising av treverk"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -603,8 +614,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
           <h3>Annet malerarbeid</h3>
           <p>Lister, dører, trapper, garasjer, hagestuer eller mindre spesialoppdrag — ta kontakt så finner vi en løsning. Ingen jobb er for liten til en uforpliktende prat.</p>
           <div class="service-photos">
-            <figure><img src="unnamed (2).webp" alt="Rom under oppussing"></figure>
-            <figure><img src="unnamed (5).webp" alt="Ferdig rom med varme farger"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (2).webp" alt="Rom under oppussing"></figure>
+            <figure><img loading="lazy" decoding="async" src="unnamed (5).webp" alt="Ferdig rom med varme farger"></figure>
           </div>
           <div class="price">Fra 595 kr/t · Gratis befaring</div>
         </div>
@@ -690,7 +701,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <section class="page-hero">
     <div class="page-hero-media">
-      <img src="https://images.pexels.com/photos/19866414/pexels-photo-19866414.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Lyst, nyoppusset rom klart for befaring">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/19866414/pexels-photo-19866414.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Lyst, nyoppusset rom klart for befaring">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content"><h1>Bestilling</h1></div>
@@ -733,7 +744,6 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
         <div class="reveal">
           <h3 style="font-size:1.5rem;margin-bottom:1rem">Velg en tid som passer deg</h3>
           <div class="booking-card">
-            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
             <div class="calendly-inline-widget" data-url="https://calendly.com/post-studionett/ozolins-maler" style="min-width:280px;height:680px;"></div>
           </div>
         </div>
@@ -887,7 +897,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <section class="page-hero">
     <div class="page-hero-media">
-      <img src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler i arbeidstøy med malerrull">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6050252/pexels-photo-6050252.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler i arbeidstøy med malerrull">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content"><h1>Om oss</h1></div>
@@ -904,7 +914,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
         <p>Etter det første driftsåret har bedriften allerede levert over 20 fullførte oppdrag i regionen — med fokus på faglig stolthet, ryddig fremgangsmåte og ingen overraskelser underveis.</p>
       </div>
       <div class="reveal">
-        <img src="https://images.pexels.com/photos/18888497/pexels-photo-18888497.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler i arbeid med malerrull" style="width:100%;height:100%;object-fit:cover;border-radius:0;min-height:340px">
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/18888497/pexels-photo-18888497.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Maler i arbeid med malerrull" style="width:100%;height:100%;object-fit:cover;border-radius:0;min-height:340px">
       </div>
     </div>
   </section>
@@ -914,20 +924,20 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
     <div class="section-inner">
       <span class="eyebrow reveal">Veien hit</span>
       <h2 class="section-title reveal">Milepæler</h2>
-      <div class="timeline" style="margin-top:2.5rem;max-width:640px">
-        <div class="timeline-item reveal">
+      <ol class="timeline" style="margin-top:2.5rem;max-width:640px">
+        <li class="timeline-item reveal">
           <div class="year">1996</div>
           <p>Vairis Ozolins blir født — starten på en lang fagvei innen håndverk.</p>
-        </div>
-        <div class="timeline-item reveal">
+        </li>
+        <li class="timeline-item reveal">
           <div class="year">2025</div>
           <p>Ozolins Maler etableres som registrert ENK i Moss, med fagbrev som maler i bunn.</p>
-        </div>
-        <div class="timeline-item reveal">
+        </li>
+        <li class="timeline-item reveal">
           <div class="year">2026</div>
           <p>Over 20 fullførte oppdrag for private og næringsdrivende i Moss-regionen — og flere på vei.</p>
-        </div>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -987,7 +997,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <section class="page-hero">
     <div class="page-hero-media">
-      <img src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nærbilde av malerpensler og verktøy">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/8381874/pexels-photo-8381874.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nærbilde av malerpensler og verktøy">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content"><h1>Galleri</h1></div>
@@ -998,35 +1008,35 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
       <span class="eyebrow reveal">Utvalgte prosjekter</span>
       <h2 class="section-title reveal">Et innblikk i arbeidet vårt</h2>
       <div class="gallery-grid" style="margin-top:2.5rem">
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Innvendig maling — ferdig resultat">
           <span class="gallery-num" aria-hidden="true">I</span>
-          <img src="https://images.pexels.com/photos/12281845/pexels-photo-12281845.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ferdig malt stue i lyse, varme farger">
-          <div class="gallery-cap">Innvendig maling — ferdig resultat</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/12281845/pexels-photo-12281845.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ferdig malt stue i lyse, varme farger">
+          <div class="gallery-cap" aria-hidden="true">Innvendig maling — ferdig resultat</div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Utvendig maling og fasade">
           <span class="gallery-num" aria-hidden="true">II</span>
-          <img src="https://images.pexels.com/photos/11622889/pexels-photo-11622889.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hus med nymalt fasade i varm farge">
-          <div class="gallery-cap">Utvendig maling og fasade</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/11622889/pexels-photo-11622889.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Hus med nymalt fasade i varm farge">
+          <div class="gallery-cap" aria-hidden="true">Utvendig maling og fasade</div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Tapetsering og detaljer">
           <span class="gallery-num" aria-hidden="true">III</span>
-          <img src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nymontert tapet med mønster på soveromsvegg">
-          <div class="gallery-cap">Tapetsering og detaljer</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7746462/pexels-photo-7746462.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Nymontert tapet med mønster på soveromsvegg">
+          <div class="gallery-cap" aria-hidden="true">Tapetsering og detaljer</div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Sparkeling og pussing">
           <span class="gallery-num" aria-hidden="true">IV</span>
-          <img src="https://images.pexels.com/photos/6474483/pexels-photo-6474483.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Vegg under sparkling og pussing før maling">
-          <div class="gallery-cap">Sparkeling og pussing</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6474483/pexels-photo-6474483.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Vegg under sparkling og pussing før maling">
+          <div class="gallery-cap" aria-hidden="true">Sparkeling og pussing</div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Beising og overflatebehandling">
           <span class="gallery-num" aria-hidden="true">V</span>
-          <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Beising av treverk med pensel">
-          <div class="gallery-cap">Beising og overflatebehandling</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Beising av treverk med pensel">
+          <div class="gallery-cap" aria-hidden="true">Beising og overflatebehandling</div>
         </div>
-        <div class="gallery-item reveal">
+        <div class="gallery-item reveal" tabindex="0" aria-label="Team i aksjon på jobb">
           <span class="gallery-num" aria-hidden="true">VI</span>
-          <img src="https://images.pexels.com/photos/7218009/pexels-photo-7218009.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Malere i arbeid på oppdrag i Moss">
-          <div class="gallery-cap">Team i aksjon på jobb</div>
+          <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7218009/pexels-photo-7218009.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Malere i arbeid på oppdrag i Moss">
+          <div class="gallery-cap" aria-hidden="true">Team i aksjon på jobb</div>
         </div>
       </div>
     </div>
@@ -1046,7 +1056,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 
   <section class="page-hero">
     <div class="page-hero-media">
-      <img src="https://images.pexels.com/photos/5583056/pexels-photo-5583056.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Verktøy og malingsutstyr klart for oppdrag">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/5583056/pexels-photo-5583056.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Verktøy og malingsutstyr klart for oppdrag">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content"><h1>Kontakt</h1></div>
@@ -1134,7 +1144,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 <footer role="contentinfo">
   <div class="footer-grid">
     <div>
-      <div class="footer-logo"><img src="unnamed-Photoroom.png" alt="Ozolins Maler logo"> Ozolins Maler</div>
+      <div class="footer-logo"><img loading="lazy" decoding="async" src="unnamed-Photoroom.png" alt="Ozolins Maler logo"> Ozolins Maler</div>
       <p class="footer-tagline">Håndverk du kan stole på — siden 2025.</p>
     </div>
     <div class="footer-col">
@@ -1158,7 +1168,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
     </div>
     <div class="footer-col">
       <h4>Finn oss</h4>
-      <iframe class="footer-map" src="https://maps.google.com/maps?q=Karlstadveien%2019%2C%201516%20MOSS&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Kart over Ozolins Malers adresse i Moss" loading="lazy"></iframe>
+      <iframe class="footer-map" src="https://maps.google.com/maps?q=Karlstadveien%2019%2C%201516%20MOSS&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Kart over Ozolins Malers adresse i Moss (bunntekst)" loading="lazy"></iframe>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1244,6 +1254,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('page-description').setAttribute('content', desc);
         document.getElementById('og-description').setAttribute('content', desc);
       }
+    }
+    if(hash === 'bestilling' && !document.getElementById('calendly-script')){
+      const s = document.createElement('script');
+      s.id = 'calendly-script';
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.body.appendChild(s);
     }
     window.scrollTo(0,0);
     closeMobileNav();

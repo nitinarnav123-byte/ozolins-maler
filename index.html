@@ -96,7 +96,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 #nav.scrolled{padding:1rem 1.5rem;box-shadow:0 4px 24px -12px rgba(34,31,28,.18)}
 @media(min-width:900px){#nav.scrolled{padding:1.1rem 3rem}}
 .nav-logo{font-family:var(--font-display);font-style:italic;font-size:1.6rem;font-weight:400;color:var(--ink);letter-spacing:.01em;display:flex;align-items:center;gap:.6rem}
-.nav-logo img{height:46px;width:auto;display:block}
+.nav-logo img{height:72px;width:auto;display:block}
 .nav-links{display:none;list-style:none;gap:1.9rem;align-items:center}
 @media(min-width:1000px){.nav-links{display:flex}}
 .nav-links a{font-family:var(--font-body);font-size:.78rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.7;transition:opacity .2s,color .2s;padding:.4rem 0;position:relative}
@@ -138,7 +138,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-name .line2{display:block;padding-left:clamp(1.2rem,4vw,4rem);color:var(--mid);font-weight:300}
 .hero-name .line3{display:block;font-style:italic;color:var(--ink);font-size:clamp(1.6rem,5vw,4.5rem)}
 .hero-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding-top:2rem;border-top:1px solid var(--rule);flex-wrap:wrap;margin-top:auto}
-.hero-desc{font-family:var(--font-body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);line-height:2;max-width:32ch}
+.hero-desc{font-family:var(--font-body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);line-height:2;max-width:32ch}
 .hero-ctas{display:flex;gap:.8rem;flex-shrink:0;flex-wrap:wrap}
 @media(max-width:600px){
   .hero-foot{flex-direction:column;align-items:stretch}
@@ -152,7 +152,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-vert{position:absolute;right:1.5rem;bottom:3rem;writing-mode:vertical-rl;font-family:var(--font-body);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);z-index:1}
 .hero-badge{position:absolute;left:-1px;bottom:3rem;background:var(--bg-light);padding:1.2rem 1.5rem;z-index:1}
 .hero-badge-num{font-family:var(--font-display);font-style:italic;font-size:2.5rem;font-weight:300;line-height:1;color:var(--ink);display:block}
-.hero-badge-label{font-family:var(--font-body);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);display:block;margin-top:.3rem}
+.hero-badge-label{font-family:var(--font-body);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-top:.3rem}
 @media(prefers-reduced-motion:no-preference){
   .hero-left .eyebrow,.hero-name,.hero-foot{opacity:0;transform:translateY(20px);animation:fadein 1s var(--ease) forwards}
   .hero-name{animation-delay:.12s}
@@ -312,7 +312,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
 @media(min-width:1100px){.footer-grid{grid-template-columns:1fr .8fr 1fr 1fr}}
 .footer-map{width:100%;aspect-ratio:4/3;border:0;filter:grayscale(100%) saturate(0) brightness(.9) invert(1);opacity:.75;margin-top:.4rem}
 .footer-logo{font-family:var(--font-display);font-style:italic;font-size:1.8rem;font-weight:300;display:flex;align-items:center;gap:.7rem}
-.footer-logo img{height:58px;width:auto;display:block}
+.footer-logo img{height:84px;width:auto;display:block}
 .footer-tagline{margin-top:.6rem;opacity:.6;font-style:italic;font-family:var(--font-display);font-size:1.1rem}
 .footer-col h4{font-family:var(--font-body);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.1rem;font-weight:400;color:var(--sand-l)}
 .footer-col ul{display:flex;flex-direction:column;gap:.7rem}
@@ -769,8 +769,8 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
                     <option value="Tapetsering">Tapetsering</option>
                     <option value="Sparkeling og pussing">Sparkeling og pussing</option>
                     <option value="Betonggulv og epoxy">Betonggulv og epoxy</option>
-                    <option value="Beising">Beising</option>
-                    <option value="Annet">Annet</option>
+                    <option value="Beising og overflatebehandling">Beising og overflatebehandling</option>
+                    <option value="Annet malerarbeid">Annet malerarbeid</option>
                   </select>
                   <span class="field-error" id="err-b-tjeneste"></span>
                 </div>
@@ -1042,7 +1042,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
   </section>
 
 </div>
-<!-- ============ PAGE 7: KONTAKT ============ -->
+<!-- ============ PAGE 6: KONTAKT ============ -->
 <div class="page" id="page-kontakt" data-title="Kontakt | Ozolins Maler — Maler i Moss" data-desc="Ta kontakt med Ozolins Maler i Moss for gratis befaring og pristilbud. Telefon, e-post, adresse og åpningstider.">
 
   <section class="page-hero">
@@ -1164,7 +1164,7 @@ footer{background:var(--ink);color:var(--bg-light);padding:var(--space-m) 1.5rem
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Ozolins Maler. Alle rettigheter forbeholdt.</span>
+    <span>© 2025–2026 Ozolins Maler. Alle rettigheter forbeholdt.</span>
     <span>Org.nr. 936 481 558 MVA</span>
   </div>
 </footer>
@@ -1270,11 +1270,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- NEWSLETTER FORMS ---------- */
-  ['home','footer'].forEach(suffix => {
-    const form = document.getElementById('newsletter-form-' + suffix);
-    const msg = document.getElementById('newsletter-msg-' + suffix);
-    if(!form) return;
+  /* ---------- NEWSLETTER FORM ---------- */
+  {
+    const form = document.getElementById('newsletter-form-home');
+    const msg = document.getElementById('newsletter-msg-home');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = form.querySelector('input[type="email"]').value.trim();
@@ -1308,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.textContent = originalLabel;
       }
     });
-  });
+  }
 
   /* ---------- FIELD VALIDATION HELPERS ---------- */
   function validateField(field, errEl, message){
